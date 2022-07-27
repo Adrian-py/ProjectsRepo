@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fun Facts About Animals</title>
+
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="./app/css/index.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="animal-generator__title">AnimalGenerator</h1>
+      <button class="reload-button" onClick="nextAnimal()">
+        Reload
+        <img src="./assets/reload-icon.svg" alt="" class="reload-button-icon" />
+      </button>
+    </header>
+    <main>
+      <img src="" alt="animal picture" id="animal-picture" />
+      <div class="animal-fact__container">
+        <div class="animal-fact__name__container">
+          <h2 class="animal-fact__name" id="animal-fact__name"></h2>
+          <p class="animal-fact__name__latin"></p>
+        </div>
+
+        <div class="animal-fact__desc">
+          <div class="animal-fact__desc__fields">
+            <p class="animal-fact__desc__fields__type">Type:</p>
+            <p class="animal-fact__desc__fields__lifespan">Lifespan:</p>
+            <p class="animal-fact__desc__fields__habitat">Habitat:</p>
+            <p class="animal-fact__desc__fields__diet">Diet:</p>
+            <p class="animal-fact__desc__fields__location">Location:</p>
+          </div>
+
+          <div class="animal-fact__desc__data">
+            <p class="animal-fact__desc__data__type"></p>
+            <p class="animal-fact__desc__data__lifespan"></p>
+            <p class="animal-fact__desc__data__habitat"></p>
+            <p class="animal-fact__desc__data__diet"></p>
+            <p class="animal-fact__desc__data__location"></p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribute">
+      <span>Created By: </span>
+      <a href="https://github.com/Adrian-py">Adrian Hartanto</a>
+    </div>
+  </body>
+  <script src="./app/js/index.js"></script>
+</html>

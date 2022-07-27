@@ -1,0 +1,935 @@
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-container{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 9vh;
+    background: rgb(39,39,39);
+    padding-left: 8%;
+    padding-right: 10%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    transition: all ease-in-out 250ms;
+}
+.navbar-container .dropdown-button{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar-container .dropdown-button #dropdown-btn-text{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Quintessential', cursive;
+    user-select: none;
+}
+
+.navbar-container .right-side-container{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar-container .dropdown-button #dropdown-icon{
+    position: relative;
+    top: 3px;
+}
+
+.navbar-container .right-side-container .register-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-container .right-side-container .register-container #register-text{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Quintessential', cursive;
+}
+
+.navbar-container .right-side-container #logo{
+    width: 90px;
+    cursor: pointer;
+}
+
+/* dropdown */
+.navbar-container .dropdown-button:hover .dropdown-container{
+    display: block;
+}
+
+.navbar-container .dropdown-button .dropdown-container{
+    display: none;
+    position: fixed;
+    top: 9vh;
+}
+
+.navbar-container .dropdown-button .dropdown-container ul{
+    position: relative;
+    left: 2.2rem;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-container .dropdown-button .dropdown-container ul li{
+    width: 10rem;
+    height: 7vh;
+    background-color: rgb(0,0,0,0.7);
+}
+
+.navbar-container .dropdown-button .dropdown-container ul li:hover{
+    background: rgb(0,0,0,0.6);
+}
+
+.navbar-container .dropdown-button .dropdown-container ul li a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Quintessential', cursive;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* geography */
+.geography-container{
+    position: absolute;
+    top: 9vh;
+    width: 100%;
+    height: 70vh;
+
+    background: url("./images/bg/1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0 0px 80px 25px rgba(255, 255, 255, 0.4);
+}
+
+.geography-container .shading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.geography-container .content-container{
+    position: absolute;
+    top: 50%;
+    left: 3vw;
+    transform: translateY(-50%);
+
+    width: 80%;
+    height: 73%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: rgba(0,0,0,0.5);
+}
+
+.geography-container .content-container #geography-slider{
+    height: 100%;
+    max-width: 70%;
+    transition: all 250ms ease-in-out;
+}
+
+.geography-container .content-container .desc-container{
+    width: 28%;
+    height: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.geography-container .content-container .desc-container .title-container{
+    width: 60%;
+    height: 28%;
+    border-radius: 10px;
+    background: #F6F6F6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.geography-container .content-container .desc-container .title-container #title{
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'Quintessential', cursive;
+    color: #AD885D;
+}
+
+.geography-container .content-container .desc-container .desc{
+    position: relative;
+    bottom: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Quintessential', cursive;
+    font-weight: bold;
+    color: white;
+}
+
+.geography-container .content-container .desc-container .desc #region-name{
+    font-size: 2.5rem;
+    transition: all 250ms ease-in-out;
+}
+
+.geography-container .content-container .desc-container .desc #region-desc{
+    font-size: 1.2rem;
+    transition: all 250ms ease-in-out;
+}
+
+/* enemies */
+.enemies-container{
+    position: absolute;
+    top: 79vh;
+    width: 100%;
+    height: 70vh;
+
+    background: url("./images/bg/2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1;
+    box-shadow: 0 0 80px 25px rgba(0,0,0,0.4);
+}
+
+.enemies-container .shading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.enemies-container .content-container{
+    position: absolute;
+    top: 50%;
+    right: 3vw;
+    transform: translateY(-50%);
+
+    width: 80%;
+    height: 73%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: rgba(0,0,0,0.5);
+}
+
+.enemies-container .content-container #enemies-slider{
+    height: 100%;
+    max-width: 70%;
+    transition: all 250ms ease-in-out;
+}
+
+.enemies-container .content-container .desc-container{
+    width: 35%;
+    height: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.enemies-container .content-container .desc-container .title-container{
+    width: 50%;
+    height: 28%;
+    border-radius: 10px;
+    background: #F6F6F6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enemies-container .content-container .desc-container .title-container #title{
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'Quintessential', cursive;
+    color: #AD885D;
+}
+
+.enemies-container .content-container .desc-container #enemies-name{
+    position: relative;
+    bottom: 4rem;
+    font-size: 2.1rem;
+    font-family: 'Quintessential', cursive;
+    font-weight: bold;
+    color: white;
+    transition: all 250ms ease-in-out;
+}
+
+/* elemental */
+.elemental-container{
+    position: absolute;
+    top: 149vh;
+    width: 100%;
+    height: 70vh;
+
+    background: url("./images/bg/3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -2;
+    box-shadow: 0 0 80px 25px rgba(255, 255, 255, 0.4);
+}
+
+.elemental-container .shading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.elemental-container .content-container{
+    position: absolute;
+    top: 50%;
+    left: 3vw;
+    transform: translateY(-50%);
+
+    width: 80%;
+    height: 73%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: rgba(0,0,0,0.5);
+}
+
+.elemental-container .content-container #elemental-slider{
+    height: 100%;
+    max-width: 70%;
+    transition: all 250ms ease-in-out;
+}
+
+.elemental-container .content-container .desc-container{
+    width: 28%;
+    height: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.elemental-container .content-container .desc-container .title-container{
+    width: 75%;
+    height: 28%;
+    border-radius: 10px;
+    background: #F6F6F6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elemental-container .content-container .desc-container .title-container #title{
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'Quintessential', cursive;
+    color: #AD885D;
+}
+
+.elemental-container .content-container .desc-container #elemental-name{
+    position: relative;
+    bottom: 4rem;
+    font-size: 3rem;
+    font-family: 'Quintessential', cursive;
+    font-weight: bold;
+    color: white;
+    transition: all 250ms ease-in-out;
+}
+
+/* boss */
+.boss-container{
+    position: absolute;
+    top: 219vh;
+    width: 100%;
+    height: 70vh;
+
+    background: url("./images/bg/4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -3;
+}
+
+.boss-container .shading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.boss-container .content-container{
+    position: absolute;
+    top: 50%;
+    right: 3vw;
+    transform: translateY(-50%);
+
+    width: 80%;
+    height: 73%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: rgba(0,0,0,0.5);
+}
+
+.boss-container .content-container #boss-slider{
+    height: 100%;
+    max-width: 60%;
+    transition: all 250ms ease-in-out;
+}
+
+.boss-container .content-container .desc-container{
+    width: 35%;
+    height: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.boss-container .content-container .desc-container .title-container{
+    width: 60%;
+    height: 28%;
+    border-radius: 10px;
+    background: #F6F6F6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boss-container .content-container .desc-container .title-container #title{
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'Quintessential', cursive;
+    color: #AD885D;
+}
+
+.boss-container .content-container .desc-container #boss-name{
+    position: relative;
+    bottom: 4rem;
+    font-size: 1.6rem;
+    font-family: 'Quintessential', cursive;
+    font-weight: bold;
+    color: white;
+    transition: all 250ms ease-in-out;
+}
+
+/* cursor for arrows */
+#geographyLeftArrow, #geographyRightArrow, #enemiesLeftArrow, #enemiesRightArrow, #elementalLeftArrow, #elementalRightArrow, #bossLeftArrow, #bossRightArrow{
+    cursor: pointer;
+}
+
+/* footer */
+.footer-container{
+    position: absolute;
+    top: 289vh;
+    width: 100%;
+    height: 50vh;
+    background: rgb(33, 32, 32);
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+}
+
+.footer-container .left-container{
+    height: 70%;
+    width: 55%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-container .left-container .logo-and-mihoyo-container{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-container .left-container .logo-and-mihoyo-container #mihoyo{
+    height: 20%;
+}
+
+.footer-container .left-container .logo-and-mihoyo-container #straight-seperator{
+    height: 50%;
+}
+
+.footer-container .left-container .logo-and-mihoyo-container #logo{
+    width: 40%;
+    cursor: pointer;
+}
+
+.footer-container .left-container .follow-container{
+    width: 30%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+}
+
+.footer-container .left-container .follow-container #follow-title{
+    color: white;
+    font-size: 2rem;
+    font-family: 'Quintessential';
+    text-align: center;
+}
+
+.footer-container .left-container .follow-container #seperator4{
+    width: 100%;
+}
+
+.footer-container .left-container .links-icon{
+    width: 100%;
+    height: 70%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-container .left-container .links-icon div{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-container .left-container .links-icon div img{
+    padding-right: 2rem;
+}
+
+.footer-container .left-container .links-icon div a{
+    color: white;
+    font-family: 'Quintessential';
+    text-decoration: none;
+}
+
+/* right container */
+.footer-container .available-container{
+    position: relative;
+    top: -2.2rem;
+    width: 25%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-container .available-container #available-title{
+    width: 100%;
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Quintessential';
+    text-align: center;
+}
+
+.footer-container .available-container #seperator{
+    width: 80%;
+}
+
+.footer-container .available-container .images-container{
+    width: 100%;
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-container .available-container .images-container .top-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-container .available-container .images-container .bottom-container{
+    width: 100%;
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-container .available-container .images-container img{
+    height: 1.9rem;
+}
+
+/* media query */
+
+@media only screen and (min-width: 200px) and (max-width: 426px){
+    /* navbar */
+    .navbar-container .dropdown-button #dropdown-btn-text{
+        font-size: 0.9rem;
+    }
+
+    .navbar-container .right-side-container{
+        width: 50%;
+    }
+
+    .navbar-container .right-side-container .register-container #register-text{
+        font-size: 0.8rem;
+    }
+
+    .navbar-container .right-side-container #logo{
+        width: 25%;
+    }
+
+    /* geography */
+    .geography-container .content-container{
+        left: 0;
+        width: 100%;
+        height: 50%;
+    }
+    .geography-container .content-container #geography-slider{
+        max-width: 60%;
+        height: auto;
+    }
+
+    .geography-container .content-container .desc-container .title-container{
+        width: 85%;
+        height: 22%;
+    }
+
+    .geography-container .content-container .desc-container .title-container #title{
+        font-size: 1.2rem;
+    }
+
+    .geography-container .content-container .desc-container .desc{
+        bottom: 3rem;
+    }
+
+    .geography-container .content-container .desc-container .desc #region-name{
+        font-size: 1.3rem;
+    }
+
+    .geography-container .content-container .desc-container .desc #region-desc{
+        text-align: center;
+        font-size: 0.7rem;
+    }
+
+    /* enemies */
+    .enemies-container .content-container{
+        left: 0;
+        width: 100%;
+        height: 50%;
+    }
+    .enemies-container .content-container #enemies-slider{
+        height: 80%;
+        max-width: 60%;
+    }
+
+    .enemies-container .content-container .desc-container .title-container{
+        width: 85%;
+        height: 25%;
+    }
+
+    .enemies-container .content-container .desc-container .title-container #title{
+        font-size: 1.2rem;
+    }
+
+    .enemies-container .content-container .desc-container #enemies-name{
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    /* elemental */
+    .elemental-container .content-container{
+        left: 0;
+        width: 100%;
+        height: 50%;
+    }
+    .elemental-container .content-container #elemental-slider{
+        height: 80%;
+        max-width: 60%;
+    }
+
+    .elemental-container .content-container .desc-container .title-container{
+        width: 85%;
+        height: 40%;
+    }
+
+    .elemental-container .content-container .desc-container .title-container #title{
+        font-size: 1.2rem;
+    }
+
+    .elemental-container .content-container .desc-container #elemental-name{
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    /* boss */
+    .boss-container .content-container{
+        left: 0;
+        width: 100%;
+        height: 50%;
+    }
+    .boss-container .content-container #boss-slider{
+        height: 80%;
+        max-width: 60%;
+    }
+
+    .boss-container .content-container .desc-container .title-container{
+        width: 85%;
+        height: 25%;
+    }
+
+    .boss-container .content-container .desc-container .title-container #title{
+        font-size: 1.2rem;
+    }
+
+    .boss-container .content-container .desc-container #boss-name{
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    /* footer */
+    .footer-container .left-container{
+        width: 55%;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer-container .left-container .logo-and-mihoyo-container{
+        width: 70%;
+        height: 50%;
+    }
+
+    .footer-container .left-container .logo-and-mihoyo-container #mihoyo{
+        height: 20%;
+    }
+
+    .footer-container .left-container .logo-and-mihoyo-container #straight-seperator{
+        height: 30%;
+    }
+
+    .footer-container .left-container .logo-and-mihoyo-container #logo{
+        width: 50%;
+    }
+
+    .footer-container .left-container .follow-container{
+        width: 60%;
+    }
+
+    .footer-container .left-container .follow-container #follow-title{
+        font-size: 1.2rem;
+    }
+
+    .footer-container .left-container .follow-container .links-icon div img{
+        width: 2rem;
+        height: auto;
+        padding-right: 1rem;
+    }
+
+    .footer-container .left-container .follow-container .links-icon div a{
+        font-size: 0.7rem;
+    }
+
+    .footer-container .available-container{
+        top: 0;
+        width: 55%;
+    }
+
+    .footer-container .available-container #available-title{
+        font-size: 1rem;
+    }
+
+    .footer-container .available-container .images-container img{
+        height: 1rem;
+    }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 800px){
+    /* navbar part */
+    .navbar-container .dropdown-button #dropdown-btn-text{
+        font-size: 0.9rem;
+    }
+
+    .navbar-container .right-side-container{
+        width: 50%;
+    }
+
+    .navbar-container .right-side-container .register-container #register-text{
+        font-size: 0.9rem;
+    }
+
+    .navbar-container .right-side-container #logo{
+        width: 25%;
+    }
+
+    /* geography */
+    .geography-container .content-container{
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+        height: 65%;
+    }
+    .geography-container .content-container #geography-slider{
+        height: 80%;
+        max-width: 60%;
+    }
+
+    .geography-container .content-container .desc-container .title-container{
+        width: 70%;
+    }
+
+    .geography-container .content-container .desc-container .desc #region-name{
+        font-size: 2rem;
+    }
+
+    .geography-container .content-container .desc-container .desc #region-desc{
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    /* enemies */
+    .enemies-container .content-container{
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+        height: 65%;
+    }
+    .enemies-container .content-container #enemies-slider{
+        height: 80%;
+        max-width: 60%;
+    }
+
+    .enemies-container .content-container .desc-container .title-container{
+        width: 70%;
+    }
+
+    .enemies-container .content-container .desc-container #enemies-name{
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    /* elemental */
+    .elemental-container .content-container{
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+        height: 65%;
+    }
+    .elemental-container .content-container #elemental-slider{
+        height: 80%;
+        max-width: 60%;
+    }
+
+    .elemental-container .content-container .desc-container .title-container{
+        width: 90%;
+    }
+
+    .elemental-container .content-container .desc-container .title-container #title{
+        font-size: 1.4rem;
+    }
+
+    .elemental-container .content-container .desc-container #elemental-name{
+        text-align: center;
+        font-size: 1.7rem;
+    }
+
+    /* boss */
+    .boss-container .content-container{
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+        height: 65%;
+    }
+    .boss-container .content-container #boss-slider{
+        height: 80%;
+        max-width: 60%;
+    }
+
+    .boss-container .content-container .desc-container .title-container{
+        width: 70%;
+    }
+
+    .boss-container .content-container .desc-container #boss-name{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    /* footer */
+    .footer-container .left-container{
+        width: 60%;
+    }
+
+    .footer-container .left-container .logo-and-mihoyo-container{
+        width: 40%;
+    }
+
+    .footer-container .left-container .logo-and-mihoyo-container #mihoyo{
+        height: 10%;
+    }
+
+    .footer-container .left-container .logo-and-mihoyo-container #straight-seperator{
+        height: 30%;
+    }
+
+    .footer-container .left-container .follow-container{
+        width: 40%;
+    }
+
+    .footer-container .left-container .follow-container #follow-title{
+        font-size: 1.2rem;
+    }
+
+    .footer-container .left-container .follow-container .links-icon div img{
+        width: 2.2rem;
+        height: auto;
+        padding-right: 1rem;
+    }
+
+    .footer-container .left-container .follow-container .links-icon div a{
+        font-size: 0.72rem;
+    }
+
+    .footer-container .available-container{
+        width: 30%;
+    }
+
+    .footer-container .available-container #available-title{
+        font-size: 1rem;
+    }
+
+    .footer-container .available-container .images-container img{
+        height: 1.2rem;
+    }
+}

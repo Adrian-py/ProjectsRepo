@@ -1,0 +1,434 @@
+@use "../utils/breakpoints.scss" as *;
+
+main {
+  width: 100%;
+  height: fit-content;
+
+  @include breakpoint(SDesktop) {
+    width: 90%;
+    height: 60vh;
+  }
+
+  @include breakpoint(MDesktop) {
+    width: 62.5%;
+    height: 48.5vh;
+  }
+
+  @include breakpoint(LDesktop) {
+    width: 55%;
+  }
+}
+
+// For general styling of inputs, labels and containers
+.splitter-form {
+  width: 100%;
+  height: fit-content;
+  padding: 5vh 7.5vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 4vh;
+  border-radius: 20px 20px 0 0;
+  background: var(--white);
+
+  @include breakpoint(SDesktop) {
+    height: 100%;
+    padding: 4vh 3.5vw;
+    flex-direction: row;
+    border-radius: 24px;
+    gap: 3vh;
+  }
+
+  @include breakpoint(LDesktop) {
+    padding: 4vh 2.5vw;
+  }
+
+  &__inputs {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 4vh;
+
+    @include breakpoint(SDesktop) {
+      height: 100%;
+      justify-content: space-between;
+      gap: 0;
+    }
+
+    @include breakpoint(MDesktop) {
+      height: 100%;
+    }
+
+    & > * {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 2vh;
+
+      @include breakpoint(SDesktop) {
+        gap: 1vh;
+      }
+    }
+  }
+
+  &__labels {
+    font-weight: 700;
+    color: var(--text);
+
+    @include breakpoint(tablet) {
+      font-size: 1.5rem;
+    }
+
+    @include breakpoint(SDesktop) {
+      font-size: 1.05rem;
+    }
+  }
+}
+
+// Bill field
+.splitter-form__inputs__bill {
+  &__input {
+    position: relative;
+    width: 100%;
+    height: 2.75rem;
+
+    @include breakpoint(tablet) {
+      height: 4rem;
+    }
+
+    @include breakpoint(SDesktop) {
+      height: 3rem;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+      z-index: 1;
+
+      @include breakpoint(SDesktop) {
+        height: 40%;
+      }
+    }
+
+    &__field {
+      width: 100%;
+      height: 100%;
+      padding: 0 5%;
+      background: var(--inputBackground);
+      font-family: var(--font);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--inputText);
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      text-align: right;
+      z-index: 0;
+
+      &:focus {
+        border: 1px solid var(--active);
+      }
+
+      @include breakpoint(tablet) {
+        font-size: 1.75rem;
+      }
+
+      @include breakpoint(SDesktop) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+// Tip percentage field
+.splitter-form__inputs__percent {
+  &__grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    grid-auto-rows: 3rem;
+    gap: 2vh;
+
+    @include breakpoint(tablet) {
+      grid-auto-rows: 4.5rem;
+    }
+
+    @include breakpoint(SDesktop) {
+      grid-template-columns: repeat(auto-fit, minmax(28%, 1fr));
+      grid-auto-rows: 2.9rem;
+      gap: 1.5vh;
+    }
+  }
+
+  &__container {
+    position: relative;
+    border-radius: 5px;
+    background: var(--inputText);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+      background: var(--background);
+      color: var(--inputText);
+    }
+
+    &--custom {
+      background: var(--inputBackground);
+      &:hover {
+        background: var(--inputBackground);
+      }
+    }
+  }
+
+  &__num {
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    @include breakpoint(tablet) {
+      font-size: 1.75rem;
+    }
+
+    @include breakpoint(SDesktop) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+
+    &--custom {
+      font-family: var(--font);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      padding: 0 7%;
+      border: none;
+      background: none;
+      text-align: right;
+      outline: none;
+      opacity: 1;
+      cursor: text;
+
+      @include breakpoint(tablet) {
+        font-size: 1.75rem;
+      }
+
+      @include breakpoint(SDesktop) {
+        padding: 0 5%;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+// Number of People Field
+.splitter-form__inputs__people {
+  &__input {
+    width: 100%;
+    height: 100%;
+    padding: 0 5%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    text-align: right;
+    background: var(--inputBackground);
+    font-family: var(--font);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--inputText);
+    z-index: 0;
+
+    &:focus {
+      border: 1px solid var(--active);
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 1.75rem;
+    }
+
+    @include breakpoint(SDesktop) {
+      font-size: 1.5rem;
+    }
+
+    &__container {
+      position: relative;
+      width: 100%;
+      height: 2.7rem;
+
+      @include breakpoint(tablet) {
+        height: 4rem;
+      }
+
+      @include breakpoint(SDesktop) {
+        height: 3rem;
+      }
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        z-index: 1;
+
+        @include breakpoint(SDesktop) {
+          height: 40%;
+        }
+      }
+    }
+  }
+
+  &__label__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__error {
+    font-weight: 700;
+    color: var(--warning);
+  }
+}
+
+// Results Container
+.splitter-form__results {
+  margin-bottom: 10%;
+
+  @include breakpoint(SDesktop) {
+    margin: 0;
+  }
+
+  &__container {
+    width: 100%;
+    padding: 12% 8% 8% 8%;
+    border-radius: 10px;
+    background: var(--inputText);
+
+    @include breakpoint(SDesktop) {
+      height: 100%;
+      padding: 6% 5% 5% 5%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+  }
+
+  &__result {
+    display: flex;
+    justify-content: space-between;
+
+    &:first-child {
+      margin-bottom: 5%;
+    }
+  }
+
+  &__desc {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--inputBackground);
+
+    @include breakpoint(tablet) {
+      font-size: 1.5rem;
+    }
+
+    @include breakpoint(SDesktop) {
+      font-size: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    &__person {
+      font-size: 0.8rem;
+      color: var(--dark-grayish-cyan);
+
+      @include breakpoint(tablet) {
+        font-size: 1.25rem;
+      }
+
+      @include breakpoint(SDesktop) {
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  &__num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--active);
+
+    @include breakpoint(tablet) {
+      font-size: 2.5rem;
+    }
+
+    @include breakpoint(SDesktop) {
+      font-size: 3rem;
+    }
+  }
+}
+
+#splitter-form {
+  &__reset {
+    width: 100%;
+    padding: 5% 0;
+    font-family: var(--font);
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: var(--active);
+    color: var(--inputText);
+    outline: none;
+    border: none;
+    border-radius: 2.5px;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+      background: var(--background);
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 1.5rem;
+    }
+
+    @include breakpoint(SDesktop) {
+      padding: 2.5% 0;
+      font-size: 1.35rem;
+    }
+  }
+}
+
+// Toggled Styles
+.disabled {
+  display: none;
+}
+
+.active-button {
+  background: var(--active);
+  color: var(--inputText);
+}
+
+.active-button--custom {
+  border: 2px solid var(--active);
+}
+
+.disabled-button {
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.25;
+}

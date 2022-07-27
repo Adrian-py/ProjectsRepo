@@ -1,0 +1,96 @@
+@use "../utils/function.scss" as *;
+@use "../utils/breakpoints.scss" as *;
+
+main {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.475vh;
+}
+
+#animal-picture {
+  max-width: 100%;
+  height: rem(400);
+  object-fit: cover;
+  border-radius: 10px;
+
+  @include breakpoint(tablet) {
+    height: rem(300);
+  }
+
+  @include breakpoint(phone) {
+    height: rem(200);
+  }
+}
+
+.animal-fact__container {
+  max-width: 100%;
+}
+
+.animal-fact__name__container {
+  margin-bottom: 2.59vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @include breakpoint(phone) {
+    margin-bottom: 4vh;
+  }
+}
+
+.animal-fact__name {
+  font-size: 3rem;
+  text-align: center;
+
+  @include breakpoint(tablet) {
+    font-size: 2.5rem;
+  }
+
+  @include breakpoint(phone) {
+    font-size: 1.7rem;
+  }
+}
+
+.animal-fact__name__latin {
+  font-size: 1.25rem;
+  font-style: italic;
+
+  @include breakpoint(tablet) {
+    font-size: 1.1rem;
+  }
+
+  @include breakpoint(phone) {
+    font-size: 0.9rem;
+  }
+}
+
+.animal-fact__desc {
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.5rem;
+
+  @include breakpoint(phone) {
+    font-size: 1rem;
+  }
+}
+
+.animal-fact__desc__fields,
+.animal-fact__desc__data {
+  height: 100%;
+  margin-right: 9.1%;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 1.85vh;
+}
+
+.animal-fact__desc__data {
+  font-weight: 400;
+  margin: 0;
+  white-space: nowrap;
+}

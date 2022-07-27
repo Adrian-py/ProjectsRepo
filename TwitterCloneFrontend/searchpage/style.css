@@ -1,0 +1,898 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  position: relative;
+  background: #72ccff;
+}
+
+/* Navbar Section */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #e9f7ff;
+  box-shadow: 0px 0px 10px #000000;
+  z-index: 1;
+}
+
+nav .nav-logo {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+nav .nav-logo:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+nav .nav-links {
+  width: 50%;
+}
+
+nav .nav-links ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+nav .nav-links ul li {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .nav-links ul li a {
+  color: #292929;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .nav-links ul li a img {
+  width: 20%;
+}
+
+nav .nav-links ul li a .nav-home-logo {
+  width: 35%;
+}
+
+/* Content */
+
+main {
+  position: absolute;
+  top: 8vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2%;
+}
+
+/* Search Results Section */
+main .search-result-section {
+  position: relative;
+  width: 70%;
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+main .search-result-section .results-options {
+  position: sticky;
+  top: 0;
+  width: 30%;
+  height: 50vh;
+  padding: calc(8vh + 4%) 0 0 4%;
+  display: flex;
+  justify-content: center;
+}
+
+main .search-result-section .results-options .options {
+  width: 98%;
+  height: 100%;
+}
+
+main .search-result-section .results-options .options p {
+  height: 20%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main .search-result-section .results-options .selector {
+  width: 2%;
+  height: 20%;
+  background: #72ccff;
+  transition: all 250ms ease-in-out;
+}
+
+main .search-result-section .right-result-part {
+  width: 75%;
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+main .search-result-section .right-result-part .search-container {
+  width: 100%;
+  height: 8vh;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main
+  .search-result-section
+  .right-result-part
+  .search-container
+  > a
+  .back-button,
+.more-options-button {
+  width: fit-content;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+main
+  .search-result-section
+  .right-result-part
+  .search-container
+  .back-button
+  img {
+  width: 2.5rem;
+}
+
+main .search-result-section .right-result-part .search-container .search-input {
+  width: 75%;
+  height: 50%;
+  padding: 0 3%;
+
+  border: none;
+  border-radius: 20px;
+  background: #ecedf0;
+  outline: none;
+}
+
+main
+  .search-result-section
+  .right-result-part
+  .search-container
+  .search-input:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main .search-result-section .right-result-part .result-tweets {
+  width: 100%;
+}
+
+main .search-result-section .right-result-part .result-tweets .tweet {
+  width: 100%;
+  height: 20vh;
+  padding: 0 5% 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+main
+  .search-result-section
+  .right-result-part
+  .result-tweets
+  .tweet
+  .user-profile-picture {
+  width: 12%;
+}
+
+main
+  .search-result-section
+  .right-result-part
+  .result-tweets
+  .tweet
+  .tweet-content {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2%;
+  flex-direction: column;
+}
+
+main
+  .search-result-section
+  .right-result-part
+  .result-tweets
+  .tweet
+  .tweet-content
+  .tweet-content-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main
+  .search-result-section
+  .right-result-part
+  .result-tweets
+  .tweet
+  .tweet-content
+  .tweet-content-top
+  .tweet-content-desc {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main
+  .search-result-section
+  .right-result-part
+  .result-tweets
+  .tweet
+  .tweet-content
+  .tweet-content-top
+  .tweet-content-desc
+  .tweet-content-desc-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+main
+  .search-result-section
+  .right-result-part
+  .result-tweets
+  .tweet
+  .tweet-content
+  .tweet-content-top
+  .tweet-content-desc
+  .tweet-content-desc-handle {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+main
+  .search-result-section
+  .right-result-part
+  .result-tweets
+  .tweet
+  .tweet-content
+  .tweet-content-top
+  .tweet-content-desc
+  .tweet-content-desc-post-time {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+main
+  .search-result-section
+  .right-result-part
+  .result-tweets
+  .tweet
+  .tweet-content
+  .tweet-content-top
+  a {
+  width: 5%;
+}
+
+main
+  .search-result-section
+  .right-result-part
+  .result-tweets
+  .tweet
+  .tweet-content
+  .tweet-content-top
+  a
+  .more-options-button {
+  width: 100%;
+  border-radius: 50%;
+}
+
+main
+  .search-result-section
+  .right-result-part
+  .result-tweets
+  .tweet
+  .tweet-content
+  .tweet-content-text {
+  margin-bottom: 2%;
+  font-size: 0.9rem;
+}
+
+main
+  .search-result-section
+  .right-result-part
+  .result-tweets
+  .tweet
+  .tweet-content
+  .tweet-content-bottom-options {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main
+  .search-result-section
+  .right-result-part
+  .result-tweets
+  .tweet
+  .tweet-content
+  .tweet-content-bottom-options
+  a {
+  width: 15%;
+  color: black;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main
+  .search-result-section
+  .right-result-part
+  .result-tweets
+  .tweet
+  .tweet-content
+  .tweet-content-bottom-options
+  a
+  img {
+  width: 40%;
+}
+
+/* Right Side Options */
+
+main .right-side-content {
+  position: sticky;
+  top: -50vh;
+  width: 28%;
+  height: auto;
+  padding: 2% 1% 0 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .right-side-content > div {
+  margin-bottom: 5%;
+  box-shadow: 0 0 10px rgba(43, 43, 43, 0.5);
+}
+
+main .right-side-content .search-filters {
+  width: 100%;
+  height: 198px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  background: white;
+  border-radius: 10px;
+}
+
+main .right-side-content .search-filters .search-filters-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+main .right-side-content .search-filters .filters-container {
+  width: 91.18%;
+  height: 73px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+main .right-side-content .search-filters .filters-container .people-filter {
+  width: 55%;
+  height: 100%;
+  margin-right: 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+main
+  .right-side-content
+  .search-filters
+  .filters-container
+  .people-filter
+  .people-filter-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+main
+  .right-side-content
+  .search-filters
+  .filters-container
+  .people-filter
+  > .people-filter-anyone,
+.people-filter-follow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .right-side-content .search-filters .filters-container .location-filter {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+main
+  .right-side-content
+  .search-filters
+  .filters-container
+  .location-filter
+  .location-filter-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+main
+  .right-side-content
+  .search-filters
+  .filters-container
+  .location-filter
+  > .location-filter-anywhere,
+.location-filter-near {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .right-side-content .search-filters .show-more-button {
+  align-self: center;
+  cursor: pointer;
+}
+
+main .right-side-content .profile {
+  width: 100%;
+  height: 14vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(43, 43, 43, 0.5);
+  padding: 0 10% 0 10%;
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+}
+
+main .right-side-content .profile .profile-picture {
+  width: 5rem;
+}
+
+main .right-side-content .profile .profile-desc {
+  width: 55%;
+}
+
+main .right-side-content .profile .profile-desc .profile-name {
+  font-weight: bold;
+}
+
+main .right-side-content .profile .profile-desc .profile-handle {
+  font-size: 0.95rem;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+main .right-side-content .profile .profile-logo-container {
+  width: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .right-side-content .profile .profile-logo-container .profile-open-logo {
+  width: 1.6rem;
+  border-radius: 50%;
+  transition: all 250ms ease-in-out;
+}
+
+main
+  .right-side-content
+  .profile
+  .profile-logo-container
+  .profile-open-logo:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+main .right-side-content .search-bar {
+  width: 100%;
+  height: 5vh;
+  padding: 0 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2%;
+  border-radius: 20px;
+  background: white;
+}
+
+main .right-side-content .search-bar .search-logo {
+  height: 60%;
+}
+
+main .right-side-content .search-bar .search-input {
+  width: 80%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+main .right-side-content .trending {
+  width: 100%;
+  height: 54vh;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 5% 0% 5% 0%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+main .right-side-content .trending .trending-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-left: 5%;
+}
+
+main .right-side-content .trending .trends {
+  /* position: relative;
+    top: -1.5rem; */
+  width: 100%;
+  height: 80%;
+}
+
+main .right-side-content .trending .trends .trend {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 150ms ease-in-out;
+  text-decoration: none;
+}
+
+main .right-side-content .trending .trends .trend:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+main .right-side-content .trending .trends .trend .trend-content {
+  width: 85%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .right-side-content .trending .trends .trend .trend-content .trend-desc {
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+main
+  .right-side-content
+  .trending
+  .trends
+  .trend
+  .trend-content
+  .trend-desc
+  .trend-type {
+  font-size: 0.9rem;
+}
+
+main
+  .right-side-content
+  .trending
+  .trends
+  .trend
+  .trend-content
+  .trend-desc
+  .trend-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+main
+  .right-side-content
+  .trending
+  .trends
+  .trend
+  .trend-content
+  .trend-desc
+  .trend-tweet-amount {
+  font-size: 0.9rem;
+}
+
+main .right-side-content .trending .show-more-button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.8rem;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+
+main .right-side-content .people-to-follow {
+  width: 100%;
+  height: 50vh;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0px 0px 10px rgba(43, 43, 43, 0.5);
+  padding: 5% 0%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+main .right-side-content .people-to-follow .people-to-follow-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  margin-left: 5%;
+}
+
+main .right-side-content .people-to-follow .users {
+  width: 100%;
+  height: 80%;
+}
+
+main .right-side-content .people-to-follow .users .user {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+
+main .right-side-content .people-to-follow .users .user:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+main .right-side-content .people-to-follow .users .user .user-content {
+  width: 85%;
+  height: 85%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+}
+
+main
+  .right-side-content
+  .people-to-follow
+  .users
+  .user
+  .user-content
+  .user-picture {
+  width: 20%;
+}
+
+main
+  .right-side-content
+  .people-to-follow
+  .users
+  .user
+  .user-content
+  .user-desc {
+  width: 50%;
+}
+
+main
+  .right-side-content
+  .people-to-follow
+  .users
+  .user
+  .user-content
+  .user-desc
+  .user-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+main
+  .right-side-content
+  .people-to-follow
+  .users
+  .user
+  .user-content
+  .user-desc
+  .user-handle {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+main
+  .right-side-content
+  .people-to-follow
+  .users
+  .user
+  .user-content
+  .user-follow-button {
+  width: 20%;
+  height: 3vh;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background: #37b7ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main
+  .right-side-content
+  .people-to-follow
+  .users
+  .user
+  .user-content
+  .user-follow-button:active {
+  background: #06a4ff;
+}
+
+main .right-side-content .people-to-follow .show-more-button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4%;
+  cursor: pointer;
+}
+
+/* Laptop Size */
+
+@media only screen and (max-width: 1440px) {
+  nav .nav-links {
+    width: 65%;
+  }
+  main {
+    width: 85%;
+  }
+}
+
+/* Tablet Size */
+
+@media only screen and (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+  nav {
+    top: 92vh;
+    justify-content: space-evenly;
+  }
+  nav .nav-logo {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  nav .nav-links {
+    width: 80%;
+  }
+  nav .nav-links ul li a p {
+    display: none;
+  }
+  nav .nav-links ul li a img,
+  nav .nav-links ul li a .nav-home-logo {
+    width: 80%;
+  }
+  main {
+    top: 0;
+    width: 90%;
+  }
+  main .search-result-section {
+    width: 100%;
+  }
+  main .right-side-content {
+    display: none;
+  }
+}
+
+/* Phone Size */
+
+@media only screen and (max-width: 425px) {
+  body {
+    background: white;
+  }
+  nav {
+    justify-content: center;
+  }
+  nav .nav-logo {
+    display: none;
+  }
+  nav .nav-links {
+    width: 100%;
+  }
+  nav .nav-links ul li a img {
+    width: 100%;
+  }
+  nav .nav-links ul li a .nav-home-logo {
+    width: 100%;
+  }
+  nav .nav-links ul .del-logo {
+    display: none;
+  }
+  main {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  main .search-result-section {
+    display: block;
+  }
+  main .search-result-section .results-options {
+    position: sticky;
+    top: 0;
+    padding: 0;
+    width: 100%;
+    height: 6vh;
+    margin-top: 8vh;
+    flex-direction: column;
+    z-index: 1;
+  }
+  main .search-result-section .results-options .options {
+    width: 100%;
+    height: 95%;
+    display: flex;
+  }
+  main .search-result-section .results-options .options p {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .search-result-section .results-options .selector {
+    width: 20%;
+    height: 5%;
+  }
+  main .search-result-section .right-result-part {
+    position: relative;
+    top: -14vh;
+    width: 100%;
+  }
+  main .search-result-section .right-result-part .search-container {
+    margin-bottom: 6vh;
+  }
+}

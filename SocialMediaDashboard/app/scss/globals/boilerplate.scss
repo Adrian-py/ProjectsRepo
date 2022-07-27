@@ -1,0 +1,21 @@
+@use "../util/breakpoints.scss" as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 50ms ease-in-out;
+}
+
+html {
+  font-family: var(--font-family);
+}
+
+body {
+  height: fit-content;
+  background: var(--background);
+
+  @include breakpoint(MDesktop) {
+    overflow: hidden;
+  }
+}

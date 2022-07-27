@@ -1,0 +1,19 @@
+@use "../utils/breakpoints.scss" as *;
+
+.attribution {
+  position: absolute;
+  bottom: 1vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  font-size: 0.55rem;
+  text-align: center;
+
+  @include breakpoint(tablet) {
+    font-size: 1rem;
+  }
+
+  @include breakpoint(SDesktop) {
+    font-size: 0.75rem;
+  }
+}

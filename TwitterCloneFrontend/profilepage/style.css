@@ -1,0 +1,1077 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #72ccff;
+}
+
+/* Navbar Section */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #e9f7ff;
+  box-shadow: 0px 0px 10px #000000;
+  z-index: 1;
+}
+
+nav .nav-logo {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+nav .nav-logo:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+nav .nav-links {
+  width: 50%;
+}
+
+nav .nav-links ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+nav .nav-links ul li {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .nav-links ul li a {
+  color: #292929;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .nav-links ul li a img {
+  width: 20%;
+}
+
+nav .nav-links ul li a .nav-home-logo {
+  width: 35%;
+}
+
+/* Main Content */
+
+main {
+  position: absolute;
+  top: 8vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2%;
+}
+
+main .left-side-content {
+  width: 65%;
+  height: auto;
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+main .left-side-content .top-section {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3%;
+  font-family: "Roboto", sans-serif;
+  background: white;
+  padding: 0 5%;
+}
+
+main .left-side-content .top-section .back-button {
+  width: 1.5vw;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 250ms ease-in-out;
+}
+
+main .left-side-content .top-section .back-button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+main .left-side-content .top-section .profile-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+main .left-side-content .top-section .tweet-count {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+main .left-side-content .user-profile-header {
+  width: 100%;
+  height: 25vh;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+
+main .left-side-content .user-profile-header:hover {
+  filter: brightness(75%);
+}
+
+main .left-side-content .user-profile-section {
+  width: 100%;
+  height: 35vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  background: white;
+  padding: 0 5%;
+}
+
+main .left-side-content .user-profile-section .user-profile-top {
+  width: 100%;
+  height: 15vh;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+main
+  .left-side-content
+  .user-profile-section
+  .user-profile-top
+  .user-profile-picture {
+  height: 100%;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+
+main
+  .left-side-content
+  .user-profile-section
+  .user-profile-top
+  .user-profile-picture:hover {
+  filter: brightness(75%);
+}
+
+main
+  .left-side-content
+  .user-profile-section
+  .user-profile-top
+  .edit-profile-button {
+  width: 11%;
+  height: 5vh;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  background: rgba(114, 204, 255);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 100ms ease-in-out;
+  cursor: pointer;
+}
+
+main
+  .left-side-content
+  .user-profile-section
+  .user-profile-top
+  .edit-profile-button:hover {
+  background: rgb(147, 214, 253);
+}
+
+main
+  .left-side-content
+  .user-profile-section
+  .user-profile-top
+  .edit-profile-button:active {
+  background: rgba(114, 204, 255);
+}
+
+main .left-side-content .user-profile-section .user-desc {
+  width: 100%;
+  transform: translateY(-30%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+
+main .left-side-content .user-profile-section .user-desc .user-account-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+main .left-side-content .user-profile-section .user-desc .user-account-handle {
+  margin-bottom: 3%;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+main .left-side-content .user-profile-section .user-desc .user-account-desc {
+  width: 90%;
+  margin-bottom: 3%;
+}
+
+main .left-side-content .user-profile-section .user-desc .user-desc-bottom {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10%;
+}
+
+main
+  .left-side-content
+  .user-profile-section
+  .user-desc
+  .user-desc-bottom
+  .user-desc-bottom-location {
+  width: 35%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main
+  .left-side-content
+  .user-profile-section
+  .user-desc
+  .user-desc-bottom
+  .user-desc-bottom-join {
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main .left-side-content .user-tweets-section {
+  width: 100%;
+  min-height: 27vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+main .left-side-content .user-tweets-section .user-tweets-left-options {
+  position: sticky;
+  top: 8vh;
+  width: 30%;
+  height: 25vh;
+  padding: 4% 0 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: "Roboto", sans-serif;
+}
+
+main
+  .left-side-content
+  .user-tweets-section
+  .user-tweets-left-options
+  .options {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+main
+  .left-side-content
+  .user-tweets-section
+  .user-tweets-left-options
+  .options
+  p {
+  height: 25%;
+  font-size: 1.2rem;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main
+  .left-side-content
+  .user-tweets-section
+  .user-tweets-left-options
+  .selector {
+  width: 2%;
+  height: 25%;
+  background: #72ccff;
+  border-radius: 20px;
+  transition: all 250ms ease-in-out;
+}
+
+main .left-side-content .user-tweets-section .user-tweets-right-list {
+  width: 80%;
+  min-height: 76vh;
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+main .left-side-content .user-tweets-section .user-tweets-right-list .tweet {
+  width: 100%;
+  height: 15vh;
+  padding: 0 5% 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+main
+  .left-side-content
+  .user-tweets-section
+  .user-tweets-right-list
+  .tweet
+  .user-profile-picture {
+  width: 12%;
+}
+
+main
+  .left-side-content
+  .user-tweets-section
+  .user-tweets-right-list
+  .tweet
+  .tweet-content {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2%;
+  flex-direction: column;
+}
+
+main
+  .left-side-content
+  .user-tweets-section
+  .user-tweets-right-list
+  .tweet
+  .tweet-content
+  .tweet-content-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main
+  .left-side-content
+  .user-tweets-section
+  .user-tweets-right-list
+  .tweet
+  .tweet-content
+  .tweet-content-top
+  .tweet-content-desc {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main
+  .left-side-content
+  .user-tweets-section
+  .user-tweets-right-list
+  .tweet
+  .tweet-content
+  .tweet-content-top
+  .tweet-content-desc
+  .tweet-content-desc-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+main
+  .left-side-content
+  .user-tweets-section
+  .user-tweets-right-list
+  .tweet
+  .tweet-content
+  .tweet-content-top
+  .tweet-content-desc
+  .tweet-content-desc-handle {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+main
+  .left-side-content
+  .user-tweets-section
+  .user-tweets-right-list
+  .tweet
+  .tweet-content
+  .tweet-content-top
+  .tweet-content-desc
+  .tweet-content-desc-post-time {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+main
+  .left-side-content
+  .user-tweets-section
+  .user-tweets-right-list
+  .tweet
+  .tweet-content
+  .tweet-content-top
+  a {
+  width: 5%;
+}
+
+main
+  .left-side-content
+  .user-tweets-section
+  .user-tweets-right-list
+  .tweet
+  .tweet-content
+  .tweet-content-top
+  a
+  .more-options-button {
+  width: 100%;
+  border-radius: 50%;
+}
+
+main
+  .left-side-content
+  .user-tweets-section
+  .user-tweets-right-list
+  .tweet
+  .tweet-content
+  .tweet-content-text {
+  margin-bottom: 2%;
+  font-size: 0.9rem;
+}
+
+main
+  .left-side-content
+  .user-tweets-section
+  .user-tweets-right-list
+  .tweet
+  .tweet-content
+  .tweet-content-bottom-options {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main
+  .left-side-content
+  .user-tweets-section
+  .user-tweets-right-list
+  .tweet
+  .tweet-content
+  .tweet-content-bottom-options
+  a {
+  width: 15%;
+  color: black;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main
+  .left-side-content
+  .user-tweets-section
+  .user-tweets-right-list
+  .tweet
+  .tweet-content
+  .tweet-content-bottom-options
+  a
+  img {
+  width: 40%;
+}
+
+/* Right Side Options */
+
+main .right-side-content {
+  position: sticky;
+  top: -50vh;
+  width: 28%;
+  height: auto;
+  padding: 2% 1% 0 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .right-side-content > div {
+  margin-bottom: 5%;
+  box-shadow: 0 0 10px rgba(43, 43, 43, 0.5);
+}
+
+main .right-side-content .media {
+  width: 100%;
+  height: 20vh;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+main .right-side-content .media > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(233, 233, 233);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+}
+
+main .right-side-content .media > div:hover {
+  filter: brightness(75%);
+}
+
+main .right-side-content .media .pic2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+main .right-side-content .search-bar {
+  width: 100%;
+  height: 5vh;
+  padding: 0 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2%;
+  border-radius: 20px;
+  background: white;
+}
+
+main .right-side-content .search-bar .search-logo {
+  height: 60%;
+}
+
+main .right-side-content .search-bar .search-input {
+  width: 80%;
+  height: 80%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+main .right-side-content .trending {
+  width: 100%;
+  height: 55vh;
+  padding: 5% 0 5% 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  background: white;
+  border-radius: 10px;
+}
+
+main .right-side-content .trending .trending-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-left: 5%;
+}
+
+main .right-side-content .trending .trends {
+  width: 100%;
+  height: 80%;
+}
+
+main .right-side-content .trending .trends .trend {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+
+main .right-side-content .trending .trends .trend:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+main .right-side-content .trending .trends .trend .trend-content {
+  width: 85%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main
+  .right-side-content
+  .trending
+  .trends
+  .trend
+  .trend-content
+  .trend-desc
+  .trend-name {
+  font-weight: bold;
+}
+
+main
+  .right-side-content
+  .trending
+  .trends
+  .trend
+  .trend-content
+  .trend-desc
+  > .trend-type,
+.trend-tweet-amount {
+  font-size: 0.9rem;
+}
+
+main .right-side-content .trending .show-more-button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4%;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+
+main .right-side-content .people-to-follow {
+  width: 100%;
+  height: 50vh;
+  padding: 5% 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  background: white;
+  border-radius: 10px;
+}
+
+main .right-side-content .people-to-follow .people-to-follow-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-left: 5%;
+}
+
+main .right-side-content .people-to-follow .users {
+  width: 100%;
+  height: 80%;
+}
+
+main .right-side-content .people-to-follow .users .user {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+
+main .right-side-content .people-to-follow .users .user:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+main .right-side-content .people-to-follow .users .user .user-content {
+  width: 90%;
+  height: 85%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main
+  .right-side-content
+  .people-to-follow
+  .users
+  .user
+  .user-content
+  .user-picture {
+  width: 20%;
+}
+
+main
+  .right-side-content
+  .people-to-follow
+  .users
+  .user
+  .user-content
+  .user-desc {
+  width: 50%;
+}
+
+main
+  .right-side-content
+  .people-to-follow
+  .users
+  .user
+  .user-content
+  .user-desc
+  .user-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+main
+  .right-side-content
+  .people-to-follow
+  .users
+  .user
+  .user-content
+  .user-desc
+  .user-handle {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+main
+  .right-side-content
+  .people-to-follow
+  .users
+  .user
+  .user-content
+  .user-follow-button {
+  width: 19%;
+  height: 3vh;
+  outline: none;
+  border: none;
+  background: #37b7ff;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main
+  .right-side-content
+  .people-to-follow
+  .users
+  .user
+  .user-content
+  .user-follow-button:active {
+  background: #06a4ff;
+}
+
+main .right-side-content .people-to-follow .show-more-button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4%;
+  cursor: pointer;
+}
+
+/* Laptop size */
+
+@media only screen and (max-width: 1440px) {
+  nav .nav-links {
+    width: 65%;
+  }
+  main {
+    width: 85%;
+  }
+}
+
+/* Tablet Size */
+
+@media only screen and (max-width: 768px) {
+  nav {
+    top: 92vh;
+    justify-content: space-evenly;
+  }
+  nav .nav-logo {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  nav .nav-links {
+    width: 80%;
+  }
+  nav .nav-links ul li a p {
+    display: none;
+  }
+  nav .nav-links ul li a img,
+  nav .nav-links ul li a .nav-home-logo {
+    width: 80%;
+  }
+  main {
+    top: 0;
+    width: 90%;
+    padding-bottom: 8vh;
+  }
+  main .left-side-content {
+    width: 100%;
+  }
+  main .left-side-content .top-section {
+    padding: 0 2.5%;
+  }
+  main .left-side-content .top-section .back-button {
+    width: 2.5vw;
+  }
+  main .left-side-content .user-profile-section {
+    height: 33vh;
+  }
+  main
+    .left-side-content
+    .user-profile-section
+    .user-profile-top
+    .edit-profile-button {
+    width: 14%;
+  }
+  main .left-side-content .user-profile-section .user-desc .user-account-name {
+    font-size: 1.5rem;
+  }
+  main
+    .left-side-content
+    .user-profile-section
+    .user-desc
+    .user-account-handle {
+    margin-bottom: 4.5%;
+    font-size: 0.85rem;
+  }
+  main .left-side-content .user-profile-section .user-desc .user-account-desc {
+    width: 100%;
+    margin-bottom: 4.5%;
+    font-size: 0.85rem;
+  }
+  main .left-side-content .user-profile-section .user-desc .user-desc-bottom {
+    height: 15%;
+  }
+  main
+    .left-side-content
+    .user-profile-section
+    .user-desc
+    .user-desc-bottom
+    .user-desc-bottom-location {
+    width: 40%;
+    height: 100%;
+  }
+  main
+    .left-side-content
+    .user-profile-section
+    .user-desc
+    .user-desc-bottom
+    .user-desc-bottom-join {
+    width: 55%;
+    height: 100%;
+  }
+  main
+    .left-side-content
+    .user-profile-section
+    .user-desc
+    .user-desc-bottom
+    img {
+    height: 75%;
+  }
+  main .left-side-content .user-tweets-section .user-tweets-left-options {
+    top: 0;
+  }
+  main
+    .left-side-content
+    .user-tweets-section
+    .user-tweets-left-options
+    .options
+    > p {
+    font-size: 1rem;
+  }
+  main
+    .left-side-content
+    .user-tweets-section
+    .user-tweets-right-list
+    .tweet
+    .tweet-content
+    .tweet-content-top
+    .tweet-content-desc {
+    width: 60%;
+  }
+  main
+    .left-side-content
+    .user-tweets-section
+    .user-tweets-right-list
+    .tweet
+    .tweet-content
+    .tweet-content-top
+    .tweet-content-desc
+    .tweet-content-desc-name {
+    font-size: 1rem;
+  }
+  main
+    .left-side-content
+    .user-tweets-section
+    .user-tweets-right-list
+    .tweet
+    .tweet-content
+    .tweet-content-top
+    .tweet-content-desc
+    .tweet-content-desc-handle {
+    font-size: 0.9rem;
+  }
+  main
+    .left-side-content
+    .user-tweets-section
+    .user-tweets-right-list
+    .tweet
+    .tweet-content
+    .tweet-content-top
+    .tweet-content-desc
+    .tweet-content-desc-post-time {
+    font-size: 0.75rem;
+  }
+  main
+    .left-side-content
+    .user-tweets-section
+    .user-tweets-right-list
+    .tweet
+    .tweet-content
+    .tweet-content-text {
+    font-size: 0.85rem;
+  }
+  main .right-side-content {
+    display: none;
+  }
+}
+
+/* Phone Size */
+
+@media only screen and (max-width: 425px) {
+  nav {
+    justify-content: center;
+  }
+  nav .nav-logo {
+    display: none;
+  }
+  nav .nav-links {
+    width: 100%;
+  }
+  nav .nav-links ul li a img {
+    width: 100%;
+  }
+  nav .nav-links ul li a .nav-home-logo {
+    width: 100%;
+  }
+  nav .nav-links ul .del-logo {
+    display: none;
+  }
+  main {
+    width: 100%;
+  }
+  main .left-side-content .top-section {
+    padding: 0 4%;
+  }
+  main
+    .left-side-content
+    .user-profile-section
+    .user-profile-top
+    .edit-profile-button {
+    width: 20%;
+  }
+  main .left-side-content .user-profile-section .user-desc .user-account-desc {
+    font-size: 0.78rem;
+  }
+  main .left-side-content .user-profile-section .user-desc .user-desc-bottom {
+    width: 75%;
+    font-size: 0.9rem;
+  }
+  main .left-side-content .top-section .back-button {
+    width: 5vw;
+  }
+  main .left-side-content .user-tweets-section {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  main .left-side-content .user-tweets-section .user-tweets-left-options {
+    width: 100%;
+    height: 6vh;
+    padding: 0;
+    flex-direction: column;
+    background: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  main
+    .left-side-content
+    .user-tweets-section
+    .user-tweets-left-options
+    .options {
+    width: 100%;
+    height: 95%;
+    flex-direction: row;
+  }
+  main
+    .left-side-content
+    .user-tweets-section
+    .user-tweets-left-options
+    .options
+    p {
+    height: 100%;
+    width: 25%;
+    font-size: 0.8rem;
+  }
+  main
+    .left-side-content
+    .user-tweets-section
+    .user-tweets-left-options
+    .selector {
+    width: 25%;
+    height: 5%;
+  }
+  main .left-side-content .user-tweets-section .user-tweets-right-list {
+    width: 100%;
+  }
+  main
+    .left-side-content
+    .user-tweets-section
+    .user-tweets-right-list
+    .tweet
+    .tweet-content
+    .tweet-content-bottom-options {
+    width: 90%;
+  }
+  main
+    .left-side-content
+    .user-tweets-section
+    .user-tweets-right-list
+    .tweet
+    .tweet-content
+    .tweet-content-bottom-options
+    a
+    img {
+    width: 50%;
+  }
+}

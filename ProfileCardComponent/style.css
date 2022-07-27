@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --darkcyan: hsl(185, 75%, 39%);
+  --desaturatedblue: hsl(229, 23%, 23%);
+  --grayishblue: hsl(227, 10%, 46%);
+  overflow: hidden;
+}
+
+html {
+  font-family: "Kumbh Sans", sans-serif;
+  overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: var(--darkcyan);
+  overflow: hidden;
+}
+
+.top-decoration {
+  position: absolute;
+  top: -75vh;
+  left: -20vw;
+}
+
+.bottom-decoration {
+  position: absolute;
+  top: 55vh;
+  width: 80vw;
+  right: -25vw;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card .card-header {
+  width: 100%;
+}
+
+.card .card-profile-picture-container {
+  width: 6.5rem;
+  height: 6.5rem;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: white;
+}
+
+.card .card-profile-picture-container .card-profile-picture {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.card .profile-bio {
+  color: var(--grayishblue);
+  transform: translateY(-75%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card .profile-bio .name-and-age {
+  margin-bottom: 0.2rem;
+  font-size: 1.125rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card .profile-bio .name-and-age .name {
+  color: var(--desaturatedblue);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.card .profile-bio .country {
+  font-size: 0.9rem;
+}
+
+.card .profile-stats {
+  width: 100%;
+  height: 12.5vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.card .profile-stats div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card .profile-stats div > p {
+  color: var(--desaturatedblue);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.card .profile-stats div > .desc {
+  letter-spacing: 2px;
+  color: var(--grayishblue);
+  font-size: 0.58rem;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 375px) {
+  .top-decoration {
+    width: 200vw;
+    top: -72vh;
+    left: -135vw;
+  }
+  .bottom-decoration {
+    width: 200vw;
+    top: 45vh;
+    right: -150vw;
+  }
+  .card {
+    width: 85vw;
+  }
+}

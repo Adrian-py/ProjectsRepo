@@ -1,0 +1,68 @@
+@use "../utils/breakpoints.scss" as *;
+
+.reload-button {
+  width: 9.1667vw;
+  height: 7.25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  font-size: 2rem;
+  color: var(--light);
+  background: var(--primary);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  @include breakpoint(LDesktop) {
+    width: 10vw;
+    font-size: 1.5rem;
+  }
+
+  @include breakpoint(MDesktop) {
+    width: 10.5vw;
+  }
+
+  @include breakpoint(SDesktop) {
+    width: 14vw;
+  }
+
+  @include breakpoint(tablet) {
+    width: 20vw;
+  }
+
+  @include breakpoint(phone) {
+    width: 29vw;
+    height: 7.5vh;
+    font-size: 1rem;
+  }
+}
+
+.reload-button-icon {
+  height: 40%;
+  @include breakpoint(phone) {
+    height: 45%;
+  }
+}
+
+.reload-button:active {
+  transform: scale(0.97);
+  transition: all 100ms ease-in-out;
+}
+
+.reload-button:active .reload-button-icon {
+  animation: spin 1s ease-in-out 1;
+}
+
+.reload-button:focus .reload-button-icon {
+  animation: spin 1s ease-in-out 1;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

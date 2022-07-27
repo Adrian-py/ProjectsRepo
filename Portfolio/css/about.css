@@ -1,0 +1,471 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #4478ff;
+  --secondary: #87ff7c;
+  --dark: #0c152d;
+  --light: #f8faff;
+}
+
+html {
+  font-family: "Futura Bk BT";
+}
+
+/* =========
+    Navigation
+  =========== */
+nav {
+  padding: 2.5rem 6.44vw 0 6.44vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  width: 54.185%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Futura Lt BT";
+  list-style: none;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 5%;
+  border-radius: 5px;
+  background: var(--dark);
+  transition: all 250ms ease-in-out;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+.nav-links li a {
+  color: var(--dark);
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+/* Only shown in mobile */
+#nav-burger,
+#nav-close,
+#nav-overlay {
+  display: none;
+}
+
+#nav-close {
+  width: 8%;
+}
+
+/* =========
+ Main Content
+=========== */
+main {
+  width: 100%;
+  padding: 10vh 10vw 16.37vh 10vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+main > div {
+  margin-bottom: 12.7795vh;
+}
+
+main > div:last-child {
+  margin: 0;
+}
+
+.description__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6.75rem;
+}
+
+.description__picture {
+  width: 34.21%;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3.125rem;
+  flex-direction: column;
+}
+
+.description__name {
+  font-family: "Futura Hv BT";
+  font-size: 6rem;
+}
+
+.description__about {
+  font-family: "Futura Lt BT";
+  font-size: 2rem;
+}
+
+.description__education {
+  width: 95%;
+}
+
+th,
+td {
+  padding: 0.532vh 1.277vw;
+  font-family: "Futura Lt BT";
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.description__education__head {
+  font-size: 2rem;
+  background: var(--primary);
+  color: var(--light);
+  text-align: left;
+}
+
+.description__education__detail {
+  font-size: 1.5rem;
+}
+
+.softwares__title,
+.programming-languages__title {
+  font-family: "Futura Hv BT";
+  font-size: 4rem;
+}
+/* Softwares */
+.softwares__container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 2.555914vh;
+}
+
+.softwares__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 6.38637vw;
+}
+
+.softwares__icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.softwares__icon::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: "Futura Hv BT";
+  font-size: 1.25rem;
+  text-align: center;
+  opacity: 0;
+  transition: all 250ms ease-in-out;
+}
+
+.softwares__icon:hover::after {
+  opacity: 1;
+}
+
+#vscode-icon::after {
+  content: "VS Code";
+}
+
+#github-icon::after {
+  content: "Github";
+}
+
+#figma-icon::after {
+  content: "Figma";
+}
+
+#adobe-photoshop-icon::after {
+  content: "Adobe Photoshop";
+}
+
+/* Programming Languages */
+.programming-languages__container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 2.555914vh;
+}
+
+.programming-languages__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 6.38637vw;
+}
+
+.programming-languages__icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.programming-languages__icon::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: "Futura Hv BT";
+  font-size: 1.25rem;
+  text-align: center;
+  opacity: 0;
+  transition: all 250ms ease-in-out;
+}
+
+.programming-languages__icon:hover::after {
+  opacity: 1;
+}
+
+#css3-icon::after {
+  content: "CSS";
+}
+
+#javascript-icon::after {
+  content: "Javascript";
+}
+
+#sass-icon::after {
+  content: "Sass";
+}
+
+#mysql-icon::after {
+  content: "MySQL";
+}
+
+#cpp-icon::after {
+  content: "C++";
+}
+
+#git-icon::after {
+  content: "Git";
+}
+
+/* Large - 1600, 1536 */
+@media only screen and (max-width: 100em) {
+  main {
+    padding: 10vh 6.44vw;
+  }
+  .description__name {
+    font-size: 5.5rem;
+  }
+  .description__about {
+    font-size: 1.75rem;
+  }
+}
+
+/* Medium - 1440, 1366, 1280 */
+@media only screen and (max-width: 85.375em) {
+  .nav-links li a {
+    font-size: 1.75rem;
+  }
+  .description__container {
+    gap: 4.5rem;
+  }
+  .description {
+    gap: 2rem;
+  }
+  .description__name {
+    font-size: 5rem;
+  }
+  .description__about {
+    font-size: 1.5rem;
+  }
+  .softwares__container,
+  .programming-languages__container {
+    gap: 3vh;
+  }
+}
+
+/* Small - 1024x768 */
+@media only screen and (max-width: 64em) {
+  .nav-links {
+    width: 65%;
+  }
+  main > div {
+    margin-bottom: 10vh;
+  }
+  .description__container {
+    gap: 2.5rem;
+  }
+  .description__name {
+    font-size: 4rem;
+  }
+  .description__about {
+    font-size: 1.4rem;
+  }
+  .description__education {
+    width: 100%;
+  }
+  .description__education__head {
+    font-size: 1.5rem;
+  }
+  .description__education__detail {
+    font-size: 1.1rem;
+  }
+  .softwares__title,
+  .programming-languages__title {
+    font-size: 3rem;
+  }
+  .softwares__list,
+  .programming-languages__list {
+    height: 8vh;
+  }
+  .softwares__list svg,
+  .programming-languages__list svg {
+    height: 100%;
+  }
+  .softwares__icon::after {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet - 768x1024 */
+@media only screen and (max-width: 48em) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10%;
+    background: white;
+    box-shadow: -10px 0 50px 10px rgba(12, 21, 45, 0.25);
+    transition: all 250ms ease-in-out;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  #nav-burger {
+    height: 3.3125rem;
+    display: block;
+    cursor: pointer;
+  }
+
+  #nav-close {
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    display: block;
+  }
+
+  #nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(12, 21, 45, 0.25);
+    z-index: 1;
+  }
+  .description__container {
+    flex-direction: column;
+  }
+  .description__picture {
+    width: 60%;
+  }
+  .description {
+    align-items: center;
+  }
+  .description__name {
+    font-size: 4.5rem;
+  }
+  .description__about {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  .softwares__container,
+  .programming-languages__container {
+    width: 100%;
+    align-items: center;
+  }
+  .softwares__title,
+  .programming-languages__title {
+    text-align: center;
+  }
+  .softwares__list,
+  .programming-languages__list {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+  }
+  .softwares__list > div,
+  .programming-languages__list > div {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Phone - 360x640 */
+@media only screen and (max-width: 22.5em) {
+  nav {
+    padding: 2.5rem 9.17vw 0 9.17vw;
+  }
+
+  .nav-logo,
+  #nav-burger {
+    height: 2rem;
+  }
+
+  #nav-close {
+    width: 12%;
+  }
+  .description__container {
+    gap: 1rem;
+  }
+  .description__picture {
+    width: 75%;
+  }
+  .description {
+    gap: 1.5rem;
+  }
+  .description__name {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .description__about {
+    font-size: 1.25rem;
+  }
+  .softwares__title,
+  .programming-languages__title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .softwares__list,
+  .programming-languages__list {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17.5%, 1fr));
+    gap: 10%;
+    row-gap: 5vh;
+  }
+  .softwares__list > div,
+  .programming-languages__list > div {
+    display: flex;
+    justify-content: center;
+  }
+}

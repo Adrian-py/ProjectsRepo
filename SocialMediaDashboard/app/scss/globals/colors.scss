@@ -1,0 +1,65 @@
+:root {
+  --limegreen: hsl(163, 72%, 41%);
+  --brightred: hsl(356, 69%, 56%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --youtube: hsl(348, 97%, 39%);
+
+  /* Dark */
+  --toggleDark: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --backgroundDark: hsl(230, 17%, 14%);
+  --topBackgroundDark: hsl(232, 19%, 15%);
+  --cardBackgroundDark: hsl(228, 28%, 20%);
+  --textDark: hsl(228, 34%, 66%);
+  --textWhiteDark: hsl(0, 0%, 100%);
+
+  /* Light */
+  --toggleLight: hsl(230, 22%, 74%);
+  --backgroundLight: hsl(0, 0%, 100%);
+  --topBackgroundLight: hsl(225, 100%, 98%);
+  --cardBackgroundLight: hsl(227, 47%, 96%);
+  --textLight: hsl(228, 12%, 44%);
+  --textBlueLight: hsl(230, 17%, 14%);
+
+  /* Component's Colors */
+  --toggleBackground: var(--toggleDark);
+  --background: var(--backgroundDark);
+  --topBackground: var(--topBackgroundDark);
+  --cardBackground: var(--cardBackgroundDark);
+  --cardHover: hsl(228, 26%, 27%);
+  --text: var(--textDark);
+  --textVariant: var(--textWhiteDark);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --toggleBackground: var(--toggleLight);
+    --background: var(--backgroundLight);
+    --topBackground: var(--topBackgroundLight);
+    --cardBackground: var(--cardBackgroundLight);
+    --cardHover: hsl(231, 30%, 91%);
+    --text: var(--textLight);
+    --textVariant: var(--textBlueLight);
+  }
+}
+
+body.light {
+  --toggleBackground: var(--toggleLight);
+  --background: var(--backgroundLight);
+  --topBackground: var(--topBackgroundLight);
+  --cardBackground: var(--cardBackgroundLight);
+  --cardHover: hsl(231, 30%, 91%);
+  --text: var(--textLight);
+  --textVariant: var(--textBlueLight);
+}
+
+body.dark {
+  --toggleBackground: var(--toggleDark);
+  --background: var(--backgroundDark);
+  --topBackground: var(--topBackgroundDark);
+  --cardBackground: var(--cardBackgroundDark);
+  --cardHover: hsl(228, 26%, 27%);
+  --text: var(--textDark);
+  --textVariant: var(--textWhiteDark);
+}

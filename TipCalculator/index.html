@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./app/css/index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <img src="./images/logo.svg" alt="splitter logo" class="logo" />
+        <span class="alt-logo" class="alt-logo">SPLITTER</span>
+      </h1>
+    </header>
+
+    <main>
+      <form class="splitter-form">
+        <div class="splitter-form__inputs">
+          <div class="splitter-form__inputs__bill">
+            <label
+              for="bill-form"
+              class="splitter-form__labels splitter-form__inputs__bill__label"
+            >
+              Bill
+            </label>
+            <div class="splitter-form__inputs__bill__input">
+              <img src="./images/icon-dollar.svg" alt="dollar icon" />
+              <input
+                type="number"
+                class="splitter-form__inputs__bill__input__field"
+                id="bill-form"
+                placeholder="0"
+              />
+            </div>
+          </div>
+
+          <div class="splitter-form__inputs__percent">
+            <h2
+              class="splitter-form__labels splitter-form__inputs__percent__label"
+            >
+              Select Tip %
+            </h2>
+
+            <div class="splitter-form__inputs__percent__grid">
+              <div
+                class="splitter-form__inputs__percent__container splitter-form__inputs__percent__container--five"
+              >
+                <label
+                  for="splitter__radio__five"
+                  class="splitter-form__inputs__percent__num"
+                  >5%</label
+                >
+                <input
+                  type="radio"
+                  class="splitter-form__inputs__percent__input"
+                  id="splitter__radio__five"
+                />
+              </div>
+
+              <div
+                class="splitter-form__inputs__percent__container splitter-form__inputs__percent__container--ten"
+              >
+                <label
+                  for="splitter__radio__ten"
+                  class="splitter-form__inputs__percent__num"
+                  >10%</label
+                >
+                <input
+                  type="radio"
+                  class="splitter-form__inputs__percent__input"
+                  id="splitter__radio__ten"
+                />
+              </div>
+
+              <div
+                class="splitter-form__inputs__percent__container splitter-form__inputs__percent__container--fifteen"
+              >
+                <label
+                  for="splitter__radio__fifteen"
+                  class="splitter-form__inputs__percent__num"
+                  >15%</label
+                >
+                <input
+                  type="radio"
+                  class="splitter-form__inputs__percent__input"
+                  id="splitter__radio__fifteen"
+                />
+              </div>
+
+              <div
+                class="splitter-form__inputs__percent__container splitter-form__inputs__percent__container--twenty-five"
+              >
+                <label
+                  for="splitter__radio__twenty-five"
+                  class="splitter-form__inputs__percent__num"
+                  >25%</label
+                >
+                <input
+                  type="radio"
+                  class="splitter-form__inputs__percent__input"
+                  id="splitter__radio__twenty-five"
+                />
+              </div>
+
+              <div
+                class="splitter-form__inputs__percent__container splitter-form__inputs__percent__container--fifty"
+              >
+                <label
+                  for="splitter__radio__fifty"
+                  class="splitter-form__inputs__percent__num"
+                  >50%</label
+                >
+                <input
+                  type="radio"
+                  class="splitter-form__inputs__percent__input"
+                  id="splitter__radio__fifty"
+                />
+              </div>
+
+              <div
+                class="splitter-form__inputs__percent__container splitter-form__inputs__percent__container--custom"
+              >
+                <input
+                  type="number"
+                  class="splitter-form__inputs__percent__input splitter-form__inputs__percent__input--custom"
+                  id="splitter__radio__custom"
+                  placeholder="Custom"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="splitter-form__inputs__people">
+            <div class="splitter-form__inputs__people__label__container">
+              <label
+                for="people-form"
+                class="splitter-form__labels splitter-form__inputs__people__label"
+              >
+                Number of People</label
+              >
+              <label
+                for="people-form"
+                class="splitter-form__inputs__people__error disabled"
+                >Can't be zero</label
+              >
+            </div>
+            <div class="splitter-form__inputs__people__input__container">
+              <img src="./images/icon-person.svg" alt="people icon" />
+              <input
+                type="number"
+                class="splitter-form__inputs__people__input"
+                id="people-form"
+                placeholder="0"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="splitter-form__results__container">
+          <div class="splitter-form__results">
+            <div class="splitter-form__results__result">
+              <div class="splitter-form__results__desc">
+                Tip Amount<br /><span
+                  class="splitter-form__results__desc__person"
+                  >/ person</span
+                >
+              </div>
+              <p
+                class="splitter-form__results__num"
+                id="splitter-form__results__tip__num"
+              ></p>
+            </div>
+
+            <div class="splitter-form__results__result">
+              <div class="splitter-form__results__desc">
+                Total<br /><span class="splitter-form__results__desc__person"
+                  >/ person</span
+                >
+              </div>
+              <p
+                class="splitter-form__results__num"
+                id="splitter-form__results__total__num"
+              ></p>
+            </div>
+          </div>
+          <button
+            type="reset"
+            id="splitter-form__reset"
+            class="disabled-button"
+          >
+            RESET
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Adrian Hartanto</a>.
+    </footer>
+    <script src="./app/js/index.js"></script>
+  </body>
+</html>

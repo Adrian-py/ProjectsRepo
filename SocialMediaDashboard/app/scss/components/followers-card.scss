@@ -1,0 +1,235 @@
+@use "../util/breakpoints.scss" as *;
+
+main {
+  height: 340vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  @include breakpoint(SDesktop) {
+    height: 70vh;
+  }
+}
+
+main {
+  & > section {
+    position: relative;
+    top: -12vh;
+
+    @include breakpoint(SDesktop) {
+      top: -18vh;
+    }
+  }
+}
+
+.follower-container {
+  margin-bottom: 1.6vh;
+  padding: 5vh 6%;
+  display: flex;
+  gap: 4vh;
+  flex-direction: column;
+
+  @include breakpoint(tablet) {
+    padding: 5vh 12%;
+  }
+
+  @include breakpoint(SDesktop) {
+    margin-bottom: 0;
+    padding: 5vh 6%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include breakpoint(MDesktop) {
+    padding: 4.55vh 7%;
+  }
+
+  &__card {
+    position: relative;
+    width: 100%;
+    height: 34vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 9.5%;
+    border-radius: 5px;
+    background: var(--cardBackground);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+
+    @include breakpoint(SDesktop) {
+      height: 25vh;
+    }
+
+    @include breakpoint(MDesktop) {
+      height: 28vh;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 4px;
+    }
+
+    &__top {
+      width: 27%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10%;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text);
+
+      @include breakpoint(tablet) {
+        width: 21%;
+        font-size: 1.15rem;
+      }
+
+      @include breakpoint(SDesktop) {
+        width: 42%;
+        font-size: 0.7rem;
+        gap: 8%;
+      }
+
+      @include breakpoint(MDesktop) {
+        width: 35%;
+        font-size: 0.875rem;
+      }
+
+      @include breakpoint(LDesktop) {
+        width: 100%;
+        justify-content: center;
+        gap: 3%;
+        font-size: 1.1rem;
+      }
+    }
+
+    &__number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      &__follower {
+        font-size: 3.4rem;
+        color: var(--textVariant);
+
+        @include breakpoint(tablet) {
+          font-size: 5rem;
+        }
+
+        @include breakpoint(SDesktop) {
+          font-size: 3rem;
+        }
+
+        @include breakpoint(MDesktop) {
+          font-size: 3.8rem;
+        }
+
+        @include breakpoint(LDesktop) {
+          font-size: 4.5rem;
+        }
+      }
+
+      &__desc {
+        font-size: 0.78rem;
+        font-weight: 400;
+        letter-spacing: 5px;
+        color: var(--text);
+
+        @include breakpoint(tablet) {
+          font-size: 1.25rem;
+        }
+
+        @include breakpoint(SDesktop) {
+          font-size: 0.75rem;
+        }
+
+        @include breakpoint(MDesktop) {
+          font-size: 0.9rem;
+        }
+
+        @include breakpoint(LDesktop) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    &__change {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6%;
+
+      &__number {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--textVariant);
+
+        &--inc {
+          color: var(--limegreen);
+        }
+
+        &--dec {
+          color: var(--brightred);
+        }
+
+        @include breakpoint(tablet) {
+          font-size: 1.25rem;
+        }
+
+        @include breakpoint(SDesktop) {
+          font-size: 0.75rem;
+        }
+
+        @include breakpoint(MDesktop) {
+          font-size: 0.875rem;
+        }
+
+        @include breakpoint(LDesktop) {
+          font-size: 1.1rem;
+        }
+      }
+
+      &__icon {
+        @include breakpoint(tablet) {
+          height: 25%;
+        }
+      }
+
+      @include breakpoint(SDesktop) {
+        width: 45%;
+      }
+
+      @include breakpoint(MDesktop) {
+        width: 40%;
+      }
+    }
+
+    &--facebook::before {
+      background: var(--facebook);
+    }
+
+    &--twitter::before {
+      background: var(--twitter);
+    }
+
+    &--instagram::before {
+      background: var(--instagram);
+    }
+
+    &--youtube::before {
+      background: var(--youtube);
+    }
+
+    &:hover {
+      background: var(--cardHover);
+    }
+  }
+}

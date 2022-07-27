@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Kenshin Impact</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar-container">
+        <div class="dropdown-button">s
+            <p id="dropdown-btn-text">Home</p>
+            <img src="../icons/CaretDoubleDown.png" alt="dropdown logo" id="dropdown-icon">
+            <div class="dropdown-container">
+                <ul>
+                    <li><a href="../Landing Page/landing-page.html"><p>Home</p></a></li>
+                    <li><a href="../Characters Page/characters-page.html"><p>Characters</p></a></li>
+                    <li><a href="../About Page/about.html"><p>About</p></a></li>
+                    <li><a href="../Gallery Page/gallery.html"><p>Gallery</p></a></li>
+                    <li><a href="../Register Page/register.html"><p>Register</p></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="right-side-container">
+            <div class="register-container">
+                <img src="../icons/user.png" alt="user icon" id="user-icon">
+                <a id="register-text" href="../Register Page/register.html">Register now!</a>
+            </div>
+            <img src="../icons/logo.png" alt="kenshin logo" onclick="location.href = '../Landing Page/landing-page.html'" id="logo">
+        </div>
+    </div>
+
+    <div class="landing-part-container">
+        <div class="shading"></div>
+        <div class="content-container">
+            <img src="../icons/landingCaretCircleLeft.png" alt="left arrow" id="landingLeftArrow">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="content">
+                        <img src="./images/slider/2.jpg" alt="image-slider" id="image-slider">
+                        <div class="desc">
+                            <p id="desc-title">An Epic Fantasy Adventure Game</p>
+                            <p id="desc-story">Experience an immersive single-player expedition. <br><br> You will start on a journey to reunite with your long-lost sibling and unfold the mysteries of Teyvat, and yourself as a traveler from another world.</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <img src="./images/slider/3.jpg" alt="image-slider" id="image-slider">
+                        <div class="desc">
+                            <p id="desc-title">Explore the World*</p>
+                            <p id="desc-story">You can experience flying across the open world, swimming through crystal-clear waters, and climb the towering mountains. Defeat various enemies to discover all the hidden secrets of a world full of magic and mystery.</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <img src="./images/slider/4.jpg" alt="image-slider" id="image-slider">
+                        <div class="desc">
+                            <p id="desc-title">Travel Alone or Battle Together with Friends</p>
+                            <p id="desc-story">With 4-player cross-play that available on multiple platforms, on PS4, iOS, Android, and PC, you can jump right into battles or invite friends to join the fight.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <img src="./images/slider/5.png" alt="image-slider" id="image-slider">
+                        <div class="desc">
+                            <p id="desc-title">Master the Elements</p>
+                            <p id="desc-story">Not just another ordinary hack and slash game. You need to maximize the use of different types of elements to solve challenges and defeat enemies.</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <img src="./images/slider/1.jpg" alt="image-slider" id="image-slider">
+                        <div class="desc">
+                            <p id="desc-title">Build Your Optimal Team</p>
+                            <p id="desc-story">Choose who to fight alongside. Build a party consist of 4 characters from 20+ characters (more characters coming up) – each with an exceptional combat style, capabilities, and individuality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="../icons/landingCaretCircleRight.png" alt="right arrow" id="landingRightArrow">
+        </div>
+    </div>
+    
+    <div class="storyline-container">
+        <div class="storyline-shading"></div>
+        <div class="content">
+            <p id="storyline-title">Storyline</p>
+            <img src="../icons/seperator.png" alt="storyline seperator" id="storyline-seperator">
+            <div class="desc-container">
+                <img src="../icons/CaretLeft.png" alt="left arrow" id="storylineLeftArrow">
+                <div class="desc-text-container">
+                    <p id="region-name"></p>
+                    <img src="../icons/seperator2.png" alt="seperator" id="seperator2">
+                    <p id="region-desc"></p>
+                </div>
+                <img src="../icons/CaretRight.png" alt="right arrow" id="storylineRightArrow">
+            </div>  
+        </div>
+    </div>
+
+    <div class="latest-news-container">
+        <div class="latest-news-shading"></div>  
+        <div class="content">
+            <p id="latest-news-title">Latest News</p>
+            <img src="../icons/seperator3.png" alt="seperator" id="seperator3">
+            <div class="news-container">
+                <img src="./images/4.jpg" alt="news image" id="news-pic">
+                <div class="news-desc-container">
+                    <p id="news-title">Eula: Surging Frost</p>
+                    <p id="news-desc">From an ocean of frost, a sudden towering wave surges forth. With the clash of a blade comes the crash of a wave, delivering a piercing-cold strike that eliminates countless threats to Mondstadt.</p>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <div class="footer-container">
+        <div class="left-container">
+            <div class="logo-and-mihoyo-container">
+                <img src="../icons/mihoyo.png" alt="mihoyo logo" id="mihoyo">
+                <img src="../icons/straight-seperator.png" alt="straight-seperator" id="straight-seperator">
+                <img src="../icons/logo.png" alt="kenshin logo" onclick="location.href = '../Landing Page/landing-page.html'" id="logo">
+            </div>
+            
+            <div class="follow-container">
+                <p id="follow-title">Follow us</p>
+                <img src="../icons/seperator2.png" alt="seperator 2" id="seperator4">
+                <div class="links-icon">
+                    <div class="discord">
+                        <img src="../icons/DiscordLogo.png" alt="discord logo">
+                        <a href="https://discord.com/invite/genshinimpact">Join our community discord</a>
+                    </div>
+                    <div class="instagram">
+                        <img src="../icons/InstagramLogo.png" alt="instagram logo">
+                        <a href="https://www.instagram.com/genshinimpact/">@genshinimpact</a>
+                    </div>
+                    <div class="youtube">
+                        <img src="../icons/YoutubeLogo.png" alt="youtube logo">
+                        <a href="https://www.youtube.com/channel/UCiS882YPwZt1NfaM0gR0D9Q">Genshin Impact</a>
+                    </div>
+                    <div class="facebook">
+                        <img src="../icons/FacebookLogo.png" alt="facebook logo">
+                        <a href="https://www.facebook.com/GenshinImpact.id/?brand_redir=326121328238064">@GenshinImpact.id</a>
+                    </div>
+                    <div class="reddit">
+                        <img src="../icons/RedditLogo.png" alt="reddit logo">
+                        <a href="https://www.reddit.com/r/Genshin_Impact/">r/Genshin_Impact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="available-container">
+            <p id="available-title">Available Now on</p>
+            <img src="../icons/seperator2.png" alt="seperator 2" id="seperator">
+            <div class="images-container">
+                <div class="top-container">
+                    <img src="../icons/App Store.png" alt="app store logo" id="app-store">
+                    <img src="../icons/Google Playstore.png" alt="play store logo" id="play-store">
+                    <img src="../icons/Windows.png" alt="windows logo" id="windows">
+                </div>
+                <div class="bottom-container">
+                    <img src="../icons/ps4.png" alt="ps4 logo" id="ps4">
+                    <img src="../icons/ps5.png" alt="ps5 logo" id="ps5">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./script.js"></script>
+</html>

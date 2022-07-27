@@ -1,0 +1,382 @@
+@use "../utils/breakpoints.scss" as *;
+
+main {
+  width: 100%;
+  height: 70vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  @include breakpoint-up(LDesktop) {
+    height: 65vh;
+  }
+
+  @include breakpoint(tablet) {
+    height: auto;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+}
+
+.pictures {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.5vh;
+
+  @include breakpoint-up(LDesktop) {
+    width: 35%;
+  }
+
+  @include breakpoint(tablet) {
+    width: 100%;
+  }
+
+  &__current {
+    position: relative;
+    width: 100%;
+    height: 75%;
+
+    @include breakpoint(tablet) {
+      height: 100%;
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      object-fit: cover;
+
+      @include breakpoint(tablet) {
+        height: 45vh;
+        border-radius: 0;
+        object-fit: cover;
+        cursor: auto;
+      }
+    }
+
+    &__button {
+      display: none;
+
+      @include breakpoint(tablet) {
+        position: absolute;
+        top: 50%;
+        width: 10vw;
+        transform: translateY(-50%);
+        aspect-ratio: 1/1;
+        outline: none;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--light);
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      &--prev {
+        left: 5%;
+      }
+
+      &--next {
+        right: 5%;
+      }
+
+      & img {
+        width: 25%;
+      }
+    }
+  }
+
+  &__thumbnails {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+
+    &__pic-container {
+      width: 20%;
+      height: 100%;
+      cursor: pointer;
+
+      &__pic {
+        width: 100%;
+        height: 100%;
+        border: 3px solid transparent;
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+        object-fit: cover;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+
+      &__chosen {
+        border: 3px solid var(--orange);
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+.product {
+  width: 45%;
+
+  @include breakpoint(tablet) {
+    width: 100%;
+    padding: 4vh 6%;
+  }
+
+  &__name {
+    margin-bottom: 4vh;
+
+    &__company {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--orange);
+
+      @include breakpoint-up(LDesktop) {
+        font-size: 1.25rem;
+      }
+
+      @include breakpoint(tablet) {
+        margin-bottom: 1vh;
+        font-size: 1.25rem;
+      }
+
+      @include breakpoint(phone) {
+        margin-bottom: 2vh;
+        font-size: 0.8rem;
+      }
+    }
+
+    &__title {
+      font-size: 2.25rem;
+
+      @include breakpoint-up(LDesktop) {
+        font-size: 3rem;
+      }
+
+      @include breakpoint(tablet) {
+        font-size: 3.25rem;
+      }
+
+      @include breakpoint(phone) {
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  &__desc {
+    margin-bottom: 3vh;
+    font-size: 0.9rem;
+    color: var(--grayBlue);
+
+    @include breakpoint-up(LDesktop) {
+      font-size: 1.25rem;
+    }
+
+    @include breakpoint(tablet) {
+      margin-bottom: 4vh;
+      font-size: 1.25rem;
+    }
+
+    @include breakpoint(phone) {
+      font-size: 0.9rem;
+      line-height: 4vh;
+    }
+  }
+
+  &__prices {
+    width: 30%;
+    margin-bottom: 3vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+
+    @include breakpoint(tablet) {
+      width: 100%;
+      margin-bottom: 4vh;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
+
+    &__current {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5vw;
+      font-size: 1.5rem;
+      font-weight: 700;
+
+      @include breakpoint-up(LDesktop) {
+        font-size: 1.75rem;
+      }
+
+      @include breakpoint(tablet) {
+        gap: 4vw;
+        font-size: 1.75rem;
+      }
+
+      @include breakpoint(phone) {
+        gap: 3.5vw;
+      }
+
+      &__discount {
+        padding: 0.4vh 6%;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        background: hsl(26, 100%, 55%, 0.15);
+        color: var(--orange);
+
+        @include breakpoint-up(LDesktop) {
+          font-size: 1.15rem;
+        }
+
+        @include breakpoint(tablet) {
+          font-size: 1.25rem;
+        }
+
+        @include breakpoint(phone) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    &__old {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: line-through;
+      color: var(--lightBlue);
+
+      @include breakpoint-up(LDesktop) {
+        font-size: 1.25rem;
+      }
+
+      @include breakpoint(tablet) {
+        font-size: 1.25rem;
+      }
+
+      @include breakpoint(phone) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__add {
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(tablet) {
+      height: auto;
+      flex-direction: column;
+    }
+
+    &__amount {
+      width: 32.5%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+      background: var(--lighterBlue);
+
+      @include breakpoint(tablet) {
+        width: 100%;
+        height: 9vh;
+        margin-bottom: 2vh;
+      }
+
+      &__current {
+        font-weight: 700;
+
+        @include breakpoint-up(LDesktop) {
+          font-size: 1.25rem;
+        }
+
+        @include breakpoint(tablet) {
+          font-size: 1.5rem;
+        }
+
+        @include breakpoint(phone) {
+          font-size: 1rem;
+        }
+      }
+
+      &__button {
+        width: 25%;
+        height: 100%;
+        outline: none;
+        border: none;
+        background: none;
+        font-size: 1.5rem;
+        font-weight: 700;
+        font-family: var(--font-family);
+        color: var(--orange);
+        cursor: pointer;
+        transition: all 150ms ease-in-out;
+
+        @include breakpoint-up(LDesktop) {
+          font-size: 1.75rem;
+        }
+
+        &:hover {
+          opacity: 0.65;
+        }
+      }
+    }
+
+    &__button {
+      width: 65%;
+      height: 100%;
+      outline: none;
+      border: none;
+      background: var(--orange);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5%;
+      font-family: var(--font-family);
+      font-weight: 700;
+      color: var(--light);
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0px 25px 70px -10px rgba(255, 125, 26, 0.48);
+      transition: all 125ms ease-in-out;
+
+      @include breakpoint-up(LDesktop) {
+        font-size: 1.5rem;
+      }
+
+      @include breakpoint(tablet) {
+        width: 100%;
+        height: 9vh;
+        font-size: 1.5rem;
+      }
+
+      @include breakpoint(phone) {
+        font-size: 1.025rem;
+      }
+
+      &__icon {
+        fill: var(--light);
+      }
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+}

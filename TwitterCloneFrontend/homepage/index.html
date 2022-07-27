@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter Clone</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <a href="../homepage/index.html"
+        ><img src="../images/twitter-logo.png" class="nav-logo"
+      /></a>
+      <div class="nav-links">
+        <ul>
+          <li>
+            <a href="./index.html">
+              <p>Home</p>
+              <img src="../images/logo/Home.svg" class="nav-home-logo"
+            /></a>
+          </li>
+          <li>
+            <a href="#">
+              <p>Messages</p>
+              <img src="../images/logo/Envelope.svg"
+            /></a>
+          </li>
+          <li>
+            <a href="#">
+              <p>Notifications</p>
+              <img src="../images/logo/Notification-on.svg"
+            /></a>
+          </li>
+          <li class="del-logo">
+            <a href="#">
+              <p>Bookmark</p>
+              <img src="../images/logo/Bookmark.svg"
+            /></a>
+          </li>
+          <li class="del-logo">
+            <a href="#">
+              <p>Settings</p>
+              <img src="../images/logo/Settings-alt.svg"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section class="tweets-container">
+        <div class="create-new-tweet">
+          <a href="../profilepage/index.html"
+            ><img
+              class="profile-picture"
+              src="../images/user-profile-picture.png"
+              alt="profile-picture"
+          /></a>
+          <div class="input-area">
+            <textarea
+              class="placeholder-text"
+              placeholder="What's happening?"
+            ></textarea>
+            <div class="bottom-options">
+              <a href="#"
+                ><img
+                  src="../images/logo/Upload-new-image-button.svg"
+                  alt="upload button"
+              /></a>
+              <a href="#"
+                ><img
+                  src="../images/logo/Create-poll-button.svg"
+                  alt="create poll"
+              /></a>
+              <a href="#"
+                ><img
+                  src="../images/logo/Calender-button.svg"
+                  alt="calender button"
+              /></a>
+              <a href="#"
+                ><img
+                  class="emoji-button"
+                  src="../images/logo/Emoji-button.svg"
+                  alt="emoji button"
+              /></a>
+            </div>
+          </div>
+          <button class="tweet-button">Tweet</button>
+        </div>
+        <div class="tweets">
+          <div class="tweet">
+            <img
+              class="user-profile-picture"
+              src="../images/user-profile-picture.png"
+              alt="profile picture"
+            />
+            <div class="tweet-content">
+              <div class="tweet-desc">
+                <p class="tweet-name">AdrianH</p>
+                <p class="tweet-handle">@noctedie</p>
+                <p class="tweet-post-time">5m</p>
+              </div>
+              <p class="tweet-text">
+                This is just placement text, I dont know what to type here!
+              </p>
+              <div class="tweet-bottom-options">
+                <a href="#" class="reply-button">
+                  <img
+                    class="reply-logo"
+                    src="../images/logo/Replies-logo.svg"
+                    alt="reply button"
+                  />
+                  <p class="reply-amount">17.9K</p>
+                </a>
+
+                <a href="#" class="retweet-button">
+                  <img
+                    class="retweet-logo"
+                    src="../images/logo/Retweet-logo.svg"
+                    alt="retweet button"
+                  />
+                  <p class="retweet-amount">5K</p>
+                </a>
+
+                <a href="#" class="like-button">
+                  <img
+                    class="like-logo"
+                    src="../images/logo/Like-logo.svg"
+                    alt="like button"
+                  />
+                  <p class="like-amount">25.2K</p>
+                </a>
+
+                <a href="#" class="share-button">
+                  <img
+                    class="share-logo"
+                    src="../images/logo/Share-logo.svg"
+                    alt="share button"
+                  />
+                </a>
+              </div>
+            </div>
+            <a href="#"
+              ><img
+                class="more-options-button"
+                src="../images/logo/More-options-button.svg"
+                alt="more options button"
+            /></a>
+          </div>
+          <div class="tweet">
+            <img
+              class="user-profile-picture"
+              src="../images/user-profile-picture.png"
+              alt="profile picture"
+            />
+            <div class="tweet-content">
+              <div class="tweet-desc">
+                <p class="tweet-name">AdrianH</p>
+                <p class="tweet-handle">@noctedie</p>
+                <p class="tweet-post-time">5m</p>
+              </div>
+              <p class="tweet-text">
+                This is just placement text, I dont know what to type here!
+              </p>
+              <div class="tweet-bottom-options">
+                <a href="#" class="reply-button">
+                  <img
+                    class="reply-logo"
+                    src="../images/logo/Replies-logo.svg"
+                    alt="reply button"
+                  />
+                  <p class="reply-amount">17.9K</p>
+                </a>
+
+                <a href="#" class="retweet-button">
+                  <img
+                    class="retweet-logo"
+                    src="../images/logo/Retweet-logo.svg"
+                    alt="retweet button"
+                  />
+                  <p class="retweet-amount">5K</p>
+                </a>
+
+                <a href="#" class="like-button">
+                  <img
+                    class="like-logo"
+                    src="../images/logo/Like-logo.svg"
+                    alt="like button"
+                  />
+                  <p class="like-amount">25.2K</p>
+                </a>
+
+                <a href="#" class="share-button">
+                  <img
+                    class="share-logo"
+                    src="../images/logo/Share-logo.svg"
+                    alt="share button"
+                  />
+                </a>
+              </div>
+            </div>
+            <img
+              class="more-options-button"
+              src="../images/logo/More-options-button.svg"
+              alt="more options button"
+            />
+          </div>
+          <div class="tweet">
+            <img
+              class="user-profile-picture"
+              src="../images/user-profile-picture.png"
+              alt="profile picture"
+            />
+            <div class="tweet-content">
+              <div class="tweet-desc">
+                <p class="tweet-name">AdrianH</p>
+                <p class="tweet-handle">@noctedie</p>
+                <p class="tweet-post-time">5m</p>
+              </div>
+              <p class="tweet-text">
+                This is just placement text, I dont know what to type here!
+              </p>
+              <div class="tweet-bottom-options">
+                <a href="#" class="reply-button">
+                  <img
+                    class="reply-logo"
+                    src="../images/logo/Replies-logo.svg"
+                    alt="reply button"
+                  />
+                  <p class="reply-amount">17.9K</p>
+                </a>
+
+                <a href="#" class="retweet-button">
+                  <img
+                    class="retweet-logo"
+                    src="../images/logo/Retweet-logo.svg"
+                    alt="retweet button"
+                  />
+                  <p class="retweet-amount">5K</p>
+                </a>
+
+                <a href="#" class="like-button">
+                  <img
+                    class="like-logo"
+                    src="../images/logo/Like-logo.svg"
+                    alt="like button"
+                  />
+                  <p class="like-amount">25.2K</p>
+                </a>
+
+                <a href="#" class="share-button">
+                  <img
+                    class="share-logo"
+                    src="../images/logo/Share-logo.svg"
+                    alt="share button"
+                  />
+                </a>
+              </div>
+            </div>
+            <img
+              class="more-options-button"
+              src="../images/logo/More-options-button.svg"
+              alt="more options button"
+            />
+          </div>
+          <div class="tweet">
+            <img
+              class="user-profile-picture"
+              src="../images/user-profile-picture.png"
+              alt="profile picture"
+            />
+            <div class="tweet-content">
+              <div class="tweet-desc">
+                <p class="tweet-name">AdrianH</p>
+                <p class="tweet-handle">@noctedie</p>
+                <p class="tweet-post-time">5m</p>
+              </div>
+              <p class="tweet-text">
+                This is just placement text, I dont know what to type here!
+              </p>
+              <div class="tweet-bottom-options">
+                <a href="#" class="reply-button">
+                  <img
+                    class="reply-logo"
+                    src="../images/logo/Replies-logo.svg"
+                    alt="reply button"
+                  />
+                  <p class="reply-amount">17.9K</p>
+                </a>
+
+                <a href="#" class="retweet-button">
+                  <img
+                    class="retweet-logo"
+                    src="../images/logo/Retweet-logo.svg"
+                    alt="retweet button"
+                  />
+                  <p class="retweet-amount">5K</p>
+                </a>
+
+                <a href="#" class="like-button">
+                  <img
+                    class="like-logo"
+                    src="../images/logo/Like-logo.svg"
+                    alt="like button"
+                  />
+                  <p class="like-amount">25.2K</p>
+                </a>
+
+                <a href="#" class="share-button">
+                  <img
+                    class="share-logo"
+                    src="../images/logo/Share-logo.svg"
+                    alt="share button"
+                  />
+                </a>
+              </div>
+            </div>
+            <img
+              class="more-options-button"
+              src="../images/logo/More-options-button.svg"
+              alt="more options button"
+            />
+          </div>
+          <div class="tweet">
+            <img
+              class="user-profile-picture"
+              src="../images/user-profile-picture.png"
+              alt="profile picture"
+            />
+            <div class="tweet-content">
+              <div class="tweet-desc">
+                <p class="tweet-name">AdrianH</p>
+                <p class="tweet-handle">@noctedie</p>
+                <p class="tweet-post-time">5m</p>
+              </div>
+              <p class="tweet-text">
+                This is just placement text, I dont know what to type here!
+              </p>
+              <div class="tweet-bottom-options">
+                <a href="#" class="reply-button">
+                  <img
+                    class="reply-logo"
+                    src="../images/logo/Replies-logo.svg"
+                    alt="reply button"
+                  />
+                  <p class="reply-amount">17.9K</p>
+                </a>
+
+                <a href="#" class="retweet-button">
+                  <img
+                    class="retweet-logo"
+                    src="../images/logo/Retweet-logo.svg"
+                    alt="retweet button"
+                  />
+                  <p class="retweet-amount">5K</p>
+                </a>
+
+                <a href="#" class="like-button">
+                  <img
+                    class="like-logo"
+                    src="../images/logo/Like-logo.svg"
+                    alt="like button"
+                  />
+                  <p class="like-amount">25.2K</p>
+                </a>
+
+                <a href="#" class="share-button">
+                  <img
+                    class="share-logo"
+                    src="../images/logo/Share-logo.svg"
+                    alt="share button"
+                  />
+                </a>
+              </div>
+            </div>
+            <img
+              class="more-options-button"
+              src="../images/logo/More-options-button.svg"
+              alt="more options button"
+            />
+          </div>
+          <div class="tweet">
+            <img
+              class="user-profile-picture"
+              src="../images/user-profile-picture.png"
+              alt="profile picture"
+            />
+            <div class="tweet-content">
+              <div class="tweet-desc">
+                <p class="tweet-name">AdrianH</p>
+                <p class="tweet-handle">@noctedie</p>
+                <p class="tweet-post-time">5m</p>
+              </div>
+              <p class="tweet-text">
+                This is just placement text, I dont know what to type here!
+              </p>
+              <div class="tweet-bottom-options">
+                <a href="#" class="reply-button">
+                  <img
+                    class="reply-logo"
+                    src="../images/logo/Replies-logo.svg"
+                    alt="reply button"
+                  />
+                  <p class="reply-amount">17.9K</p>
+                </a>
+
+                <a href="#" class="retweet-button">
+                  <img
+                    class="retweet-logo"
+                    src="../images/logo/Retweet-logo.svg"
+                    alt="retweet button"
+                  />
+                  <p class="retweet-amount">5K</p>
+                </a>
+
+                <a href="#" class="like-button">
+                  <img
+                    class="like-logo"
+                    src="../images/logo/Like-logo.svg"
+                    alt="like button"
+                  />
+                  <p class="like-amount">25.2K</p>
+                </a>
+
+                <a href="#" class="share-button">
+                  <img
+                    class="share-logo"
+                    src="../images/logo/Share-logo.svg"
+                    alt="share button"
+                  />
+                </a>
+              </div>
+            </div>
+            <a href="#"
+              ><img
+                class="more-options-button"
+                src="../images/logo/More-options-button.svg"
+                alt="more options button"
+            /></a>
+          </div>
+          <div class="tweet">
+            <img
+              class="user-profile-picture"
+              src="../images/user-profile-picture.png"
+              alt="profile picture"
+            />
+            <div class="tweet-content">
+              <div class="tweet-desc">
+                <p class="tweet-name">AdrianH</p>
+                <p class="tweet-handle">@noctedie</p>
+                <p class="tweet-post-time">5m</p>
+              </div>
+              <p class="tweet-text">
+                This is just placement text, I dont know what to type here!
+              </p>
+              <div class="tweet-bottom-options">
+                <a href="#" class="reply-button">
+                  <img
+                    class="reply-logo"
+                    src="../images/logo/Replies-logo.svg"
+                    alt="reply button"
+                  />
+                  <p class="reply-amount">17.9K</p>
+                </a>
+
+                <a href="#" class="retweet-button">
+                  <img
+                    class="retweet-logo"
+                    src="../images/logo/Retweet-logo.svg"
+                    alt="retweet button"
+                  />
+                  <p class="retweet-amount">5K</p>
+                </a>
+
+                <a href="#" class="like-button">
+                  <img
+                    class="like-logo"
+                    src="../images/logo/Like-logo.svg"
+                    alt="like button"
+                  />
+                  <p class="like-amount">25.2K</p>
+                </a>
+
+                <a href="#" class="share-button">
+                  <img
+                    class="share-logo"
+                    src="../images/logo/Share-logo.svg"
+                    alt="share button"
+                  />
+                </a>
+              </div>
+            </div>
+            <a href="#"
+              ><img
+                class="more-options-button"
+                src="../images/logo/More-options-button.svg"
+                alt="more options button"
+            /></a>
+          </div>
+          <div class="tweet">
+            <img
+              class="user-profile-picture"
+              src="../images/user-profile-picture.png"
+              alt="profile picture"
+            />
+            <div class="tweet-content">
+              <div class="tweet-desc">
+                <p class="tweet-name">AdrianH</p>
+                <p class="tweet-handle">@noctedie</p>
+                <p class="tweet-post-time">5m</p>
+              </div>
+              <p class="tweet-text">
+                This is just placement text, I dont know what to type here!
+              </p>
+              <div class="tweet-bottom-options">
+                <a href="#" class="reply-button">
+                  <img
+                    class="reply-logo"
+                    src="../images/logo/Replies-logo.svg"
+                    alt="reply button"
+                  />
+                  <p class="reply-amount">17.9K</p>
+                </a>
+
+                <a href="#" class="retweet-button">
+                  <img
+                    class="retweet-logo"
+                    src="../images/logo/Retweet-logo.svg"
+                    alt="retweet button"
+                  />
+                  <p class="retweet-amount">5K</p>
+                </a>
+
+                <a href="#" class="like-button">
+                  <img
+                    class="like-logo"
+                    src="../images/logo/Like-logo.svg"
+                    alt="like button"
+                  />
+                  <p class="like-amount">25.2K</p>
+                </a>
+
+                <a href="#" class="share-button">
+                  <img
+                    class="share-logo"
+                    src="../images/logo/Share-logo.svg"
+                    alt="share button"
+                  />
+                </a>
+              </div>
+            </div>
+            <a href="#"
+              ><img
+                class="more-options-button"
+                src="../images/logo/More-options-button.svg"
+                alt="more options button"
+            /></a>
+          </div>
+          <div class="tweet">
+            <img
+              class="user-profile-picture"
+              src="../images/user-profile-picture.png"
+              alt="profile picture"
+            />
+            <div class="tweet-content">
+              <div class="tweet-desc">
+                <p class="tweet-name">AdrianH</p>
+                <p class="tweet-handle">@noctedie</p>
+                <p class="tweet-post-time">5m</p>
+              </div>
+              <p class="tweet-text">
+                This is just placement text, I dont know what to type here!
+              </p>
+              <div class="tweet-bottom-options">
+                <a href="#" class="reply-button">
+                  <img
+                    class="reply-logo"
+                    src="../images/logo/Replies-logo.svg"
+                    alt="reply button"
+                  />
+                  <p class="reply-amount">17.9K</p>
+                </a>
+
+                <a href="#" class="retweet-button">
+                  <img
+                    class="retweet-logo"
+                    src="../images/logo/Retweet-logo.svg"
+                    alt="retweet button"
+                  />
+                  <p class="retweet-amount">5K</p>
+                </a>
+
+                <a href="#" class="like-button">
+                  <img
+                    class="like-logo"
+                    src="../images/logo/Like-logo.svg"
+                    alt="like button"
+                  />
+                  <p class="like-amount">25.2K</p>
+                </a>
+
+                <a href="#" class="share-button">
+                  <img
+                    class="share-logo"
+                    src="../images/logo/Share-logo.svg"
+                    alt="share button"
+                  />
+                </a>
+              </div>
+            </div>
+            <a href="#"
+              ><img
+                class="more-options-button"
+                src="../images/logo/More-options-button.svg"
+                alt="more options button"
+            /></a>
+          </div>
+          <div class="tweet">
+            <img
+              class="user-profile-picture"
+              src="../images/user-profile-picture.png"
+              alt="profile picture"
+            />
+            <div class="tweet-content">
+              <div class="tweet-desc">
+                <p class="tweet-name">AdrianH</p>
+                <p class="tweet-handle">@noctedie</p>
+                <p class="tweet-post-time">5m</p>
+              </div>
+              <p class="tweet-text">
+                This is just placement text, I dont know what to type here!
+              </p>
+              <div class="tweet-bottom-options">
+                <a href="#" class="reply-button">
+                  <img
+                    class="reply-logo"
+                    src="../images/logo/Replies-logo.svg"
+                    alt="reply button"
+                  />
+                  <p class="reply-amount">17.9K</p>
+                </a>
+
+                <a href="#" class="retweet-button">
+                  <img
+                    class="retweet-logo"
+                    src="../images/logo/Retweet-logo.svg"
+                    alt="retweet button"
+                  />
+                  <p class="retweet-amount">5K</p>
+                </a>
+
+                <a href="#" class="like-button">
+                  <img
+                    class="like-logo"
+                    src="../images/logo/Like-logo.svg"
+                    alt="like button"
+                  />
+                  <p class="like-amount">25.2K</p>
+                </a>
+
+                <a href="#" class="share-button">
+                  <img
+                    class="share-logo"
+                    src="../images/logo/Share-logo.svg"
+                    alt="share button"
+                  />
+                </a>
+              </div>
+            </div>
+            <a href="#"
+              ><img
+                class="more-options-button"
+                src="../images/logo/More-options-button.svg"
+                alt="more options button"
+            /></a>
+          </div>
+          <div class="tweet">
+            <img
+              class="user-profile-picture"
+              src="../images/user-profile-picture.png"
+              alt="profile picture"
+            />
+            <div class="tweet-content">
+              <div class="tweet-desc">
+                <p class="tweet-name">AdrianH</p>
+                <p class="tweet-handle">@noctedie</p>
+                <p class="tweet-post-time">5m</p>
+              </div>
+              <p class="tweet-text">
+                This is just placement text, I dont know what to type here!
+              </p>
+              <div class="tweet-bottom-options">
+                <a href="#" class="reply-button">
+                  <img
+                    class="reply-logo"
+                    src="../images/logo/Replies-logo.svg"
+                    alt="reply button"
+                  />
+                  <p class="reply-amount">17.9K</p>
+                </a>
+
+                <a href="#" class="retweet-button">
+                  <img
+                    class="retweet-logo"
+                    src="../images/logo/Retweet-logo.svg"
+                    alt="retweet button"
+                  />
+                  <p class="retweet-amount">5K</p>
+                </a>
+
+                <a href="#" class="like-button">
+                  <img
+                    class="like-logo"
+                    src="../images/logo/Like-logo.svg"
+                    alt="like button"
+                  />
+                  <p class="like-amount">25.2K</p>
+                </a>
+
+                <a href="#" class="share-button">
+                  <img
+                    class="share-logo"
+                    src="../images/logo/Share-logo.svg"
+                    alt="share button"
+                  />
+                </a>
+              </div>
+            </div>
+            <a href="#"
+              ><img
+                class="more-options-button"
+                src="../images/logo/More-options-button.svg"
+                alt="more options button"
+            /></a>
+          </div>
+          <div class="tweet">
+            <img
+              class="user-profile-picture"
+              src="../images/user-profile-picture.png"
+              alt="profile picture"
+            />
+            <div class="tweet-content">
+              <div class="tweet-desc">
+                <p class="tweet-name">AdrianH</p>
+                <p class="tweet-handle">@noctedie</p>
+                <p class="tweet-post-time">5m</p>
+              </div>
+              <p class="tweet-text">
+                This is just placement text, I dont know what to type here!
+              </p>
+              <div class="tweet-bottom-options">
+                <a href="#" class="reply-button">
+                  <img
+                    class="reply-logo"
+                    src="../images/logo/Replies-logo.svg"
+                    alt="reply button"
+                  />
+                  <p class="reply-amount">17.9K</p>
+                </a>
+
+                <a href="#" class="retweet-button">
+                  <img
+                    class="retweet-logo"
+                    src="../images/logo/Retweet-logo.svg"
+                    alt="retweet button"
+                  />
+                  <p class="retweet-amount">5K</p>
+                </a>
+
+                <a href="#" class="like-button">
+                  <img
+                    class="like-logo"
+                    src="../images/logo/Like-logo.svg"
+                    alt="like button"
+                  />
+                  <p class="like-amount">25.2K</p>
+                </a>
+
+                <a href="#" class="share-button">
+                  <img
+                    class="share-logo"
+                    src="../images/logo/Share-logo.svg"
+                    alt="share button"
+                  />
+                </a>
+              </div>
+            </div>
+            <a href="#"
+              ><img
+                class="more-options-button"
+                src="../images/logo/More-options-button.svg"
+                alt="more options button"
+            /></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="right-side-content">
+        <div class="profile">
+          <a href="../profilepage/index.html"
+            ><img
+              class="profile-picture"
+              src="../images/user-profile-picture.png"
+              alt="profile-picture"
+          /></a>
+          <div class="profile-desc">
+            <p class="profile-name">AdrianH</p>
+            <p class="profile-handle">@noctedie</p>
+          </div>
+          <div class="profile-logo-container" href="#">
+            <a href="../profilepage/index.html"
+              ><img
+                class="profile-open-logo"
+                src="../images/logo/Profile-open-button.svg"
+                alt="openn profile button"
+            /></a>
+          </div>
+        </div>
+
+        <div class="search-bar">
+          <img
+            class="search-logo"
+            src="../images/logo/search-logo.svg"
+            alt="search button"
+          />
+          <input
+            class="search-input"
+            type="text"
+            placeholder="Search Twitter"
+          />
+        </div>
+
+        <div class="trending">
+          <p class="trending-title">Trending in Indonesia</p>
+          <div class="trends">
+            <a class="trend" href="../searchpage/index.html">
+              <div class="trend-content">
+                <div class="trend-desc">
+                  <p class="trend-type">Sports</p>
+                  <p class="trend-name">Mbappe</p>
+                  <p class="trend-tweet-amount">80.2K Tweets</p>
+                </div>
+                <img
+                  class="more-options-button"
+                  src="../images/logo/More-options-button.svg"
+                  alt="more options button"
+                />
+              </div>
+            </a>
+            <a class="trend" href="../searchpage/index.html">
+              <div class="trend-content">
+                <div class="trend-desc">
+                  <p class="trend-type">Music</p>
+                  <p class="trend-name">Mona</p>
+                  <p class="trend-tweet-amount">30.2K Tweets</p>
+                </div>
+                <img
+                  class="more-options-button"
+                  src="../images/logo/More-options-button.svg"
+                  alt="more options button"
+                />
+              </div>
+            </a>
+            <a class="trend" href="../searchpage/index.html">
+              <div class="trend-content">
+                <div class="trend-desc">
+                  <p class="trend-type">Music</p>
+                  <p class="trend-name">Jisoo</p>
+                  <p class="trend-tweet-amount">151.3K Tweets</p>
+                </div>
+                <img
+                  class="more-options-button"
+                  src="../images/logo/More-options-button.svg"
+                  alt="more options button"
+                />
+              </div>
+            </a>
+            <a class="trend" href="../searchpage/index.html">
+              <div class="trend-content">
+                <div class="trend-desc">
+                  <p class="trend-type">Football</p>
+                  <p class="trend-name">Perez</p>
+                  <p class="trend-tweet-amount">20.2K Tweets</p>
+                </div>
+                <img
+                  class="more-options-button"
+                  src="../images/logo/More-options-button.svg"
+                  alt="more options button"
+                />
+              </div>
+            </a>
+            <a class="trend" href="../searchpage/index.html">
+              <div class="trend-content">
+                <div class="trend-desc">
+                  <p class="trend-type">Music</p>
+                  <p class="trend-name">LALISA BY LISA</p>
+                  <p class="trend-tweet-amount">530K Tweets</p>
+                </div>
+                <img
+                  class="more-options-button"
+                  src="../images/logo/More-options-button.svg"
+                  alt="more options button"
+                />
+              </div>
+            </a>
+          </div>
+          <img
+            class="show-more-button"
+            src="../images/logo/show-more.svg"
+            alt="show more button"
+          />
+        </div>
+
+        <div class="people-to-follow">
+          <p class="people-to-follow-title">People to follow</p>
+          <div class="users">
+            <a href="#" class="user">
+              <div class="user-content">
+                <img
+                  class="user-picture"
+                  src="../images/user-profile-picture.png"
+                  alt="user profile picture"
+                />
+                <div class="user-desc">
+                  <p class="user-name">Michin</p>
+                  <p class="user-handle">@Ian</p>
+                </div>
+                <button class="user-follow-button" href="#">Follow</button>
+              </div>
+            </a>
+            <a href="#" class="user">
+              <div class="user-content">
+                <img
+                  class="user-picture"
+                  src="../images/user-profile-picture.png"
+                  alt="user profile picture"
+                />
+                <div class="user-desc">
+                  <p class="user-name">Michin</p>
+                  <p class="user-handle">@Ian</p>
+                </div>
+                <button class="user-follow-button" href="#">Follow</button>
+              </div>
+            </a>
+            <a href="#" class="user">
+              <div class="user-content">
+                <img
+                  class="user-picture"
+                  src="../images/user-profile-picture.png"
+                  alt="user profile picture"
+                />
+                <div class="user-desc">
+                  <p class="user-name">Michin</p>
+                  <p class="user-handle">@Ian</p>
+                </div>
+                <button class="user-follow-button" href="#">Follow</button>
+              </div>
+            </a>
+            <a href="#" class="user">
+              <div class="user-content">
+                <img
+                  class="user-picture"
+                  src="../images/user-profile-picture.png"
+                  alt="user profile picture"
+                />
+                <div class="user-desc">
+                  <p class="user-name">Michin</p>
+                  <p class="user-handle">@Ian</p>
+                </div>
+                <button class="user-follow-button" href="#">Follow</button>
+              </div>
+            </a>
+          </div>
+          <img
+            class="show-more-button"
+            src="../images/logo/show-more.svg"
+            alt="show more button"
+          />
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="./script.js"></script>
+</html>

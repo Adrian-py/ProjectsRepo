@@ -1,0 +1,769 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: rgba(255, 255, 255);
+  --whiteBackground: hsl(26, 100%, 99%);
+  --darkText: hsl(198, 62%, 26%);
+  --designText: hsl(212, 27%, 19%);
+  --grayishBlue: hsl(232, 10%, 55%);
+  --desaturatedCyan: hsl(167, 40%, 24%);
+  --veryDarkDesaturatedBlue: hsl(212, 27%, 19%);
+  --darkBlue: hsl(198, 62%, 26%);
+  --veryDarkGrayishBlue: hsl(213, 9%, 39%);
+  --footerText: hsl(168, 34%, 41%);
+  --footerBackground: hsl(167, 44%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --red: hsl(7, 99%, 70%);
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 16vh;
+  padding: 0 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+nav #sunnyside-logo {
+  height: 30%;
+}
+
+nav .hamburgers {
+  display: none;
+}
+
+nav ul {
+  width: 35%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: var(--white);
+}
+
+nav ul li#contact-button {
+  width: 28%;
+  height: 100%;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  transition: all 150ms ease-in-out;
+}
+
+nav ul li#contact-button a {
+  font-family: "Fraunces", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--darkText);
+  transition: all 150ms ease-in-out;
+}
+
+nav ul li#contact-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+nav ul li#contact-button:hover a {
+  color: var(--white);
+}
+
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+main .first {
+  width: 100%;
+  height: 100vh;
+  padding-top: 12%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background: url("./images/desktop/image-header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+main .first #header-hero {
+  margin-bottom: 3%;
+  font-family: "Fraunces", serif;
+  font-size: 3rem;
+  color: var(--white);
+  letter-spacing: 0.5rem;
+}
+
+main .second {
+  position: absolute;
+  top: 100vh;
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--whiteBackground);
+}
+
+main .second > div {
+  width: 50%;
+  height: 100%;
+}
+
+main .second .left {
+  padding-left: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5%;
+  flex-direction: column;
+}
+
+main .second .left h2 {
+  width: 70%;
+  font-family: "Fraunces", serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--designText);
+}
+
+main .second .left .second-text {
+  width: 70%;
+  font-family: "Barlow", sans-serif;
+  color: var(--grayishBlue);
+  line-height: 180%;
+}
+
+main .second #second-button {
+  position: relative;
+  width: 25%;
+  font-size: 1.02rem;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  color: var(--designText);
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+main .second #second-button::after {
+  content: "";
+  position: absolute;
+  bottom: -18%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  border-radius: 20px;
+  background: var(--yellow);
+  opacity: 0.25;
+  transition: all 150ms ease-in-out;
+  z-index: -1;
+}
+
+main .second #second-button:hover::after {
+  opacity: 0.85;
+}
+
+main .second .second-image {
+  background: url("./images/desktop/image-transform.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main .third {
+  position: absolute;
+  top: 185vh;
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--whiteBackground);
+}
+
+main .third > div {
+  width: 50%;
+  height: 100%;
+}
+
+main .third .third-image {
+  background: url("./images/desktop/image-stand-out.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main .third .right {
+  padding-left: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5%;
+  flex-direction: column;
+}
+
+main .third .right h2 {
+  width: 70%;
+  font-family: "Fraunces", serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--designText);
+}
+
+main .third .right .third-text {
+  width: 70%;
+  font-family: "Barlow", sans-serif;
+  color: var(--grayishBlue);
+  line-height: 180%;
+}
+
+main .third #third-button {
+  position: relative;
+  width: 25%;
+  font-size: 1.02rem;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  color: var(--designText);
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+main .third #third-button::after {
+  content: "";
+  position: absolute;
+  bottom: -18%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  border-radius: 20px;
+  background: var(--red);
+  opacity: 0.25;
+  transition: all 150ms ease-in-out;
+  z-index: -1;
+}
+
+main .third #third-button:hover::after {
+  opacity: 0.85;
+}
+
+main .fourth {
+  position: absolute;
+  top: 270vh;
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .fourth > div {
+  width: 50%;
+  height: 100%;
+}
+
+main .fourth .left {
+  position: relative;
+  background: url("./images/desktop/image-graphic-design.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+main .fourth .left .content {
+  position: relative;
+  top: -12%;
+  width: 48%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+  flex-direction: column;
+}
+
+main .fourth .left .content h2 {
+  font-family: "Fraunces", serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--desaturatedCyan);
+}
+
+main .fourth .left .content .left-text {
+  font-family: "Barlow", sans-serif;
+  color: var(--desaturatedCyan);
+  line-height: 160%;
+  text-align: center;
+}
+
+main .fourth .right {
+  position: relative;
+  background: url("./images/desktop/image-photography.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+main .fourth .right .content {
+  position: relative;
+  top: -12%;
+  width: 48%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+  flex-direction: column;
+}
+
+main .fourth .right .content h2 {
+  font-family: "Fraunces", serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--darkBlue);
+}
+
+main .fourth .right .content .right-text {
+  font-family: "Barlow", sans-serif;
+  color: var(--darkBlue);
+  line-height: 160%;
+  text-align: center;
+}
+
+main .fifth {
+  position: absolute;
+  top: 355vh;
+  width: 100%;
+  height: 100vh;
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  flex-direction: column;
+}
+
+main .fifth h2 {
+  font-family: "Fraunces", serif;
+  font-size: 1.2rem;
+  color: var(--grayishBlue);
+  letter-spacing: 5px;
+}
+
+main .fifth .testimonials {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+}
+
+main .fifth .testimonials .testimonial {
+  width: 24.2%;
+  height: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .fifth .testimonials .testimonial .picture {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+main .fifth .testimonials .testimonial .message {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.125rem;
+  color: var(--veryDarkGrayishBlue);
+  text-align: center;
+}
+
+main .fifth .testimonials .testimonial .desc {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5vh;
+}
+
+main .fifth .testimonials .testimonial .desc .name {
+  font-family: "Fraunces", serif;
+  font-size: 1.2rem;
+  color: var(--veryDarkDesaturatedBlue);
+}
+
+main .fifth .testimonials .testimonial .desc .position {
+  font-family: "Barlow", sans-serif;
+  color: var(--grayishBlue);
+}
+
+main .sixth {
+  position: absolute;
+  top: 455vh;
+  width: 100%;
+  height: 62.08333vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .sixth .picture {
+  width: 25%;
+  height: 100%;
+}
+
+main .sixth .picture.milk {
+  background: url("./images/mobile/image-gallery-milkbottles.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main .sixth .picture.orange {
+  background: url("./images/mobile/image-gallery-orange.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main .sixth .picture.cone {
+  background: url("./images/mobile/image-gallery-cone.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main .sixth .picture.sugar {
+  background: url("./images/mobile/image-gallery-sugar-cubes.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+footer {
+  position: absolute;
+  top: 517.0833vh;
+  width: 100%;
+  height: 40vh;
+  background: var(--footerBackground);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer .logo {
+  margin-bottom: 4vh;
+}
+
+footer ul {
+  width: 30%;
+  margin-bottom: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+footer ul li {
+  list-style: none;
+}
+
+footer ul li a {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.8rem;
+  color: var(--footerText);
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+
+footer ul li a:hover {
+  color: var(--white);
+}
+
+footer .social-media-links {
+  width: 15%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer .social-media-links svg {
+  cursor: pointer;
+}
+
+footer .social-media-links svg:hover path {
+  fill: var(--white);
+}
+
+@media only screen and (max-width: 375px) {
+  nav {
+    padding: 0 8%;
+  }
+
+  nav .hamburgers {
+    display: block;
+    cursor: pointer;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 0;
+    background: var(--white);
+    justify-content: center;
+    gap: 10%;
+    flex-direction: column;
+    opacity: 0;
+    transition: all 250ms ease-in-out;
+  }
+
+  nav ul::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+    width: 2rem;
+    height: 2.5rem;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    background: var(--white);
+  }
+
+  nav ul li#contact-button {
+    width: 40%;
+    height: 15%;
+    background: hsl(51, 99%, 49%);
+  }
+
+  nav ul li#contact-button:hover {
+    background: hsl(51, 99%, 49%, 0.5);
+  }
+
+  nav ul li#contact-button:hover a {
+    color: var(--darkText);
+  }
+
+  nav ul li a {
+    font-size: 1.3rem;
+    color: var(--grayishBlue);
+  }
+
+  main .first {
+    padding: 0;
+    justify-content: center;
+    background: url("./images/mobile/image-header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  main .first #header-hero {
+    margin-bottom: 15%;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  main .second > div,
+  main .third > div,
+  main .fourth > div,
+  main .fifth > div {
+    width: 100%;
+    height: 50%;
+  }
+
+  main .second {
+    height: auto;
+    flex-direction: column-reverse;
+  }
+
+  main .second .second-image {
+    height: 56.2218vh;
+    background: url("./images/mobile/image-transform.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  main .second .left {
+    height: 70vh;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+  }
+
+  main .second .left h2 {
+    width: 75%;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  main .second .left .second-text {
+    width: 92%;
+    font-size: 1.15rem;
+    text-align: center;
+  }
+
+  main .second .left #second-button {
+    width: 40%;
+  }
+
+  main .third {
+    top: 226.2218vh;
+    height: auto;
+    flex-direction: column;
+  }
+
+  main .third .third-image {
+    height: 56.2218vh;
+    background: url("./images/mobile/image-stand-out.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  main .third .right {
+    height: 70vh;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+  }
+
+  main .third .right h2 {
+    width: 75%;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  main .third .right .third-text {
+    width: 90%;
+    font-size: 1.15rem;
+    text-align: center;
+  }
+
+  main .third .right #third-button {
+    width: 40%;
+  }
+
+  main .fourth {
+    top: 352.4436vh;
+    height: 180vh;
+    background: url("./images/mobile/image-graphic-design.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    flex-direction: column;
+  }
+
+  main .fourth .left {
+    height: 90vh;
+  }
+
+  main .fourth .left .content {
+    top: -12%;
+    width: 90%;
+  }
+
+  main .fourth .right {
+    height: 90vh;
+  }
+
+  main .fourth .right .content {
+    top: -12%;
+    width: 90%;
+  }
+
+  main .fifth {
+    top: 532.4436vh;
+    height: 190vh;
+    padding-top: 15%;
+    justify-content: flex-start;
+    gap: 8%;
+  }
+
+  main .fifth .testimonials {
+    height: 85%;
+    flex-direction: column;
+    gap: 8%;
+  }
+
+  main .fifth .testimonials .testimonial {
+    width: 90%;
+    height: 30%;
+  }
+  main .fifth .testimonials .testimonial .picture {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  main .sixth {
+    top: 722.4436vh;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  main .sixth .picture {
+    width: 100%;
+  }
+
+  footer {
+    top: 782.4436vh;
+  }
+
+  footer .logo {
+    transform: scale(1.1);
+  }
+
+  footer ul {
+    width: 70%;
+    gap: 20%;
+  }
+
+  footer .social-media-links {
+    width: 50%;
+  }
+}

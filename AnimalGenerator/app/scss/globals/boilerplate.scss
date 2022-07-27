@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  font-size: 100%;
+  font-family: "Noto Sans", sans-serif;
+  background: var(--secondary);
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  padding: 5.83vh 7.34375vw;
+  overflow: hidden;
+}

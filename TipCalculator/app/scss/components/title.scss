@@ -1,0 +1,32 @@
+@use "../utils/breakpoints.scss" as *;
+
+header {
+  height: fit-content;
+  margin: 6vh 0;
+  display: flex;
+  justify-content: center;
+
+  @include breakpoint(SDesktop) {
+    margin: 12vh 0 7vh 0;
+  }
+
+  @include breakpoint(MDesktop) {
+    margin: 14vh 0 9vh 0;
+  }
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+
+  .logo {
+    width: 100%;
+  }
+}
+
+.alt-logo {
+  position: absolute;
+  left: -100000px;
+  top: auto;
+  overflow: hidden;
+}

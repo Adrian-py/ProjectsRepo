@@ -1,0 +1,811 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #72ccff;
+}
+
+/* Navbar Section */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #e9f7ff;
+  box-shadow: 0px 0px 10px #000000;
+  z-index: 1;
+}
+
+nav .nav-logo {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+nav .nav-logo:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+nav .nav-links {
+  width: 50%;
+}
+
+nav .nav-links ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+nav .nav-links ul li {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .nav-links ul li a {
+  color: #292929;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .nav-links ul li a img {
+  width: 20%;
+}
+
+nav .nav-links ul li a .nav-home-logo {
+  width: 35%;
+}
+
+/* Content */
+
+main {
+  position: absolute;
+  top: 8vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2%;
+}
+
+/* Tweets */
+
+main .tweets-container {
+  width: 65%;
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .tweets-container .create-new-tweet {
+  width: 100%;
+  height: 22vh;
+  padding: 0 8% 0 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .tweets-container .create-new-tweet .profile-picture {
+  width: 4rem;
+}
+
+main .tweets-container .create-new-tweet .input-area {
+  position: relative;
+  top: 0.6rem;
+  width: 70%;
+  height: 35%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+main .tweets-container .create-new-tweet .input-area .placeholder-text {
+  max-width: 100%;
+  height: 18vh;
+  overflow-y: hidden;
+  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
+  color: rgba(0, 0, 0, 0.65);
+  cursor: text;
+  border: none;
+  outline: none;
+}
+
+main .tweets-container .create-new-tweet .input-area .bottom-options {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main .tweets-container .create-new-tweet .input-area .bottom-options img {
+  width: 1.6rem;
+}
+
+main .tweets-container .create-new-tweet .input-area .bottom-options img:hover {
+  filter: brightness(95%);
+}
+
+main
+  .tweets-container
+  .create-new-tweet
+  .input-area
+  .bottom-options
+  img:active {
+  filter: brightness(75%);
+}
+
+main
+  .tweets-container
+  .create-new-tweet
+  .input-area
+  .bottom-options
+  .emoji-button {
+  width: 1.2rem;
+}
+
+main .tweets-container .create-new-tweet .tweet-button {
+  background: #37b7ff;
+  border: none;
+  border-radius: 20px;
+  width: 10%;
+  height: 4vh;
+  outline: none;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+main .tweets-container .create-new-tweet .tweet-button:hover {
+  background-color: #2db2ff;
+}
+
+main .tweets-container .create-new-tweet .tweet-button:active {
+  background-color: #11a8ff;
+}
+
+main .tweets-container .tweets {
+  width: 100%;
+}
+
+main .tweets-container .tweets .tweet {
+  width: 100%;
+  height: 20vh;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: none;
+  border-right: none;
+  padding: 0 8% 0 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .tweets-container .tweets .tweet .user-profile-picture {
+  width: 4rem;
+}
+
+main .tweets-container .tweets .tweet .tweet-content {
+  position: relative;
+  top: 6%;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+
+main .tweets-container .tweets .tweet .tweet-content .tweet-desc {
+  width: 30%;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .tweets-container .tweets .tweet .tweet-content .tweet-desc .tweet-name {
+  font-weight: bold;
+}
+
+main .tweets-container .tweets .tweet .tweet-content .tweet-desc .tweet-handle {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+main
+  .tweets-container
+  .tweets
+  .tweet
+  .tweet-content
+  .tweet-desc
+  .tweet-post-time {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+main .tweets-container .tweets .tweet .tweet-content .tweet-text {
+  font-size: 1rem;
+}
+
+main .tweets-container .tweets .tweet .tweet-content .tweet-bottom-options {
+  width: 70%;
+  margin-top: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .tweets-container .tweets .tweet .tweet-content .tweet-bottom-options a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+main
+  .tweets-container
+  .tweets
+  .tweet
+  .tweet-content
+  .tweet-bottom-options
+  a
+  img {
+  width: 1.4rem;
+}
+
+main .tweets-container .tweets .tweet .tweet-content .tweet-bottom-options a p {
+  font-size: 0.9rem;
+}
+
+main .tweets-container .tweets .tweet .more-options-button {
+  width: 1.2rem;
+}
+
+/* Right Side Options */
+
+main .right-side-content {
+  position: sticky;
+  top: -50vh;
+  width: 28%;
+  height: auto;
+  padding: 2% 1% 0 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .right-side-content > div {
+  margin-bottom: 5%;
+  box-shadow: 0 0 10px rgba(43, 43, 43, 0.5);
+}
+
+main .right-side-content .profile {
+  width: 100%;
+  height: 14vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(43, 43, 43, 0.5);
+  padding: 0 10% 0 10%;
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+}
+
+main .right-side-content .profile .profile-picture {
+  width: 5rem;
+}
+
+main .right-side-content .profile .profile-desc {
+  width: 55%;
+}
+
+main .right-side-content .profile .profile-desc .profile-name {
+  font-weight: bold;
+}
+
+main .right-side-content .profile .profile-desc .profile-handle {
+  font-size: 0.95rem;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+main .right-side-content .profile .profile-logo-container {
+  width: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .right-side-content .profile .profile-logo-container .profile-open-logo {
+  width: 1.6rem;
+  border-radius: 50%;
+  transition: all 250ms ease-in-out;
+}
+
+main
+  .right-side-content
+  .profile
+  .profile-logo-container
+  .profile-open-logo:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+main .right-side-content .search-bar {
+  width: 100%;
+  height: 5vh;
+  padding: 0 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2%;
+  border-radius: 20px;
+  background: white;
+}
+
+main .right-side-content .search-bar .search-logo {
+  height: 60%;
+}
+
+main .right-side-content .search-bar .search-input {
+  width: 80%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+main .right-side-content .trending {
+  width: 100%;
+  height: 54vh;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 5% 0% 5% 0%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+main .right-side-content .trending .trending-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-left: 5%;
+}
+
+main .right-side-content .trending .trends {
+  /* position: relative;
+    top: -1.5rem; */
+  width: 100%;
+  height: 80%;
+}
+
+main .right-side-content .trending .trends .trend {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 150ms ease-in-out;
+  text-decoration: none;
+}
+
+main .right-side-content .trending .trends .trend:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+main .right-side-content .trending .trends .trend .trend-content {
+  width: 85%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .right-side-content .trending .trends .trend .trend-content .trend-desc {
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+main
+  .right-side-content
+  .trending
+  .trends
+  .trend
+  .trend-content
+  .trend-desc
+  .trend-type {
+  font-size: 0.9rem;
+}
+
+main
+  .right-side-content
+  .trending
+  .trends
+  .trend
+  .trend-content
+  .trend-desc
+  .trend-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+main
+  .right-side-content
+  .trending
+  .trends
+  .trend
+  .trend-content
+  .trend-desc
+  .trend-tweet-amount {
+  font-size: 0.9rem;
+}
+
+main .right-side-content .trending .show-more-button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.8rem;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+
+main .right-side-content .people-to-follow {
+  width: 100%;
+  height: 50vh;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0px 0px 10px rgba(43, 43, 43, 0.5);
+  padding: 5% 0%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+main .right-side-content .people-to-follow .people-to-follow-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  margin-left: 5%;
+}
+
+main .right-side-content .people-to-follow .users {
+  width: 100%;
+  height: 80%;
+}
+
+main .right-side-content .people-to-follow .users .user {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+
+main .right-side-content .people-to-follow .users .user:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+main .right-side-content .people-to-follow .users .user .user-content {
+  width: 85%;
+  height: 85%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+}
+
+main
+  .right-side-content
+  .people-to-follow
+  .users
+  .user
+  .user-content
+  .user-picture {
+  width: 20%;
+}
+
+main
+  .right-side-content
+  .people-to-follow
+  .users
+  .user
+  .user-content
+  .user-desc {
+  width: 50%;
+}
+
+main
+  .right-side-content
+  .people-to-follow
+  .users
+  .user
+  .user-content
+  .user-desc
+  .user-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+main
+  .right-side-content
+  .people-to-follow
+  .users
+  .user
+  .user-content
+  .user-desc
+  .user-handle {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+main
+  .right-side-content
+  .people-to-follow
+  .users
+  .user
+  .user-content
+  .user-follow-button {
+  width: 20%;
+  height: 3vh;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background: #37b7ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main
+  .right-side-content
+  .people-to-follow
+  .users
+  .user
+  .user-content
+  .user-follow-button:active {
+  background: #06a4ff;
+}
+
+main .right-side-content .people-to-follow .show-more-button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4%;
+  cursor: pointer;
+}
+
+/* Laptop Size */
+
+@media only screen and (max-width: 1440px) {
+  nav .nav-links {
+    width: 65%;
+  }
+  main {
+    width: 85%;
+  }
+  main .tweets-container {
+    width: 65%;
+  }
+  main .right-side-content .profile .profile-picture {
+    width: 25%;
+  }
+  main .right-side-content .profile .profile-desc .profile-name {
+    font-size: 1.2rem;
+  }
+  main .right-side-content .profile .profile-desc .profile-handle {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet Size */
+
+@media only screen and (max-width: 768px) {
+  nav {
+    top: 92vh;
+    justify-content: space-evenly;
+  }
+  nav .nav-logo {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  nav .nav-links {
+    width: 80%;
+  }
+  nav .nav-links ul li a p {
+    display: none;
+  }
+  nav .nav-links ul li a img,
+  nav .nav-links ul li a .nav-home-logo {
+    width: 80%;
+  }
+  main {
+    top: 0;
+    width: 90%;
+    padding-bottom: 8vh;
+  }
+  main .tweets-container {
+    width: 100%;
+  }
+  main .tweets-container .create-new-tweet {
+    padding: 0 4%;
+  }
+  main .tweets-container .create-new-tweet .profile-picture {
+    width: 12%;
+  }
+  main .tweets-container .create-new-tweet .input-area {
+    width: 60%;
+  }
+  main .tweets-container .create-new-tweet .input-area .placeholder-text {
+    font-size: 1.2rem;
+  }
+  main .tweets-container .create-new-tweet .input-area .bottom-options {
+    width: 100%;
+  }
+  main .tweets-container .create-new-tweet .input-area .bottom-options a > img,
+  .emoji-button {
+    width: 90%;
+  }
+  main .tweets-container .create-new-tweet .tweet-button {
+    width: 14%;
+    height: 4.5vh;
+    font-size: 0.9rem;
+    font-weight: bolder;
+  }
+  main .tweets-container .tweets .tweet {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 0 2%;
+    justify-content: space-around;
+  }
+  main .tweets-container .tweets .tweet .user-profile-picture {
+    width: 12%;
+  }
+  main .tweets-container .tweets .tweet .tweet-content {
+    width: 70%;
+  }
+  main .tweets-container .tweets .tweet .tweet-content .tweet-desc {
+    width: 70%;
+    font-size: 1rem;
+  }
+  main
+    .tweets-container
+    .tweets
+    .tweet
+    .tweet-content
+    .tweet-desc
+    .tweet-handle {
+    font-size: 0.8rem;
+  }
+  main
+    .tweets-container
+    .tweets
+    .tweet
+    .tweet-content
+    .tweet-desc
+    .tweet-post-time {
+    font-size: 0.7rem;
+  }
+  main .tweets-container .tweets .tweet .tweet-content .tweet-text {
+    font-size: 0.8rem;
+  }
+  main .tweets-container .tweets .tweet .tweet-content .tweet-bottom-options {
+    width: 90%;
+  }
+  main .right-side-content {
+    display: none;
+  }
+}
+
+/* Phone Size */
+
+@media only screen and (max-width: 425px) {
+  nav {
+    justify-content: center;
+  }
+  nav .nav-logo {
+    display: none;
+  }
+  nav .nav-links {
+    width: 100%;
+  }
+  nav .nav-links ul li a img {
+    width: 100%;
+  }
+  nav .nav-links ul li a .nav-home-logo {
+    width: 100%;
+  }
+  nav .nav-links ul .del-logo {
+    display: none;
+  }
+  main {
+    width: 100%;
+  }
+  main .tweets-container .create-new-tweet {
+    height: 20vh;
+  }
+  main .tweets-container .create-new-tweet .profile-picture {
+    width: 15%;
+  }
+  main .tweets-container .create-new-tweet .input-area {
+    width: 65%;
+  }
+  main .tweets-container .create-new-tweet .input-area .placeholder-text {
+    font-size: 1rem;
+  }
+  main .tweets-container .create-new-tweet .input-area .bottom-options a > img {
+    width: 75%;
+  }
+  main .tweets-container .create-new-tweet .tweet-button {
+    width: 15%;
+    font-size: 0.8rem;
+  }
+  main .tweets-container .tweets .tweet {
+    height: 18vh;
+  }
+  main .tweets-container .tweets .tweet .user-profile-picture {
+    width: 15%;
+  }
+  main .tweets-container .tweets .tweet .tweet-content .tweet-desc {
+    margin-bottom: 1%;
+  }
+  main .tweets-container .tweets .tweet .tweet-content .tweet-bottom-options {
+    width: 100%;
+  }
+  main
+    .tweets-container
+    .tweets
+    .tweet
+    .tweet-content
+    .tweet-bottom-options
+    a
+    img {
+    width: 1.2rem;
+  }
+  main
+    .tweets-container
+    .tweets
+    .tweet
+    .tweet-content
+    .tweet-bottom-options
+    a
+    p {
+    font-size: 0.8rem;
+  }
+}

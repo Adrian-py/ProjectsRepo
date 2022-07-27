@@ -1,0 +1,233 @@
+main {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.475vh;
+}
+
+#animal-picture {
+  max-width: 100%;
+  height: 25rem;
+  object-fit: cover;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 48em) {
+  #animal-picture {
+    height: 18.75rem;
+  }
+}
+@media only screen and (max-width: 22.5em) {
+  #animal-picture {
+    height: 12.5rem;
+  }
+}
+
+.animal-fact__container {
+  max-width: 100%;
+}
+
+.animal-fact__name__container {
+  margin-bottom: 2.59vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media only screen and (max-width: 22.5em) {
+  .animal-fact__name__container {
+    margin-bottom: 4vh;
+  }
+}
+
+.animal-fact__name {
+  font-size: 3rem;
+  text-align: center;
+}
+@media only screen and (max-width: 48em) {
+  .animal-fact__name {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 22.5em) {
+  .animal-fact__name {
+    font-size: 1.7rem;
+  }
+}
+
+.animal-fact__name__latin {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+@media only screen and (max-width: 48em) {
+  .animal-fact__name__latin {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 22.5em) {
+  .animal-fact__name__latin {
+    font-size: 0.9rem;
+  }
+}
+
+.animal-fact__desc {
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 22.5em) {
+  .animal-fact__desc {
+    font-size: 1rem;
+  }
+}
+
+.animal-fact__desc__fields,
+.animal-fact__desc__data {
+  height: 100%;
+  margin-right: 9.1%;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 1.85vh;
+}
+
+.animal-fact__desc__data {
+  font-weight: 400;
+  margin: 0;
+  white-space: nowrap;
+}
+
+header {
+  width: 100%;
+  margin-bottom: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.animal-generator__title {
+  font-size: 2rem;
+}
+@media only screen and (max-width: 22.5em) {
+  .animal-generator__title {
+    font-size: 1rem;
+  }
+}
+
+.reload-button {
+  width: 9.1667vw;
+  height: 7.25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  font-size: 2rem;
+  color: var(--light);
+  background: var(--primary);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 100em) {
+  .reload-button {
+    width: 10vw;
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 85.375em) {
+  .reload-button {
+    width: 10.5vw;
+  }
+}
+@media only screen and (max-width: 64em) {
+  .reload-button {
+    width: 14vw;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .reload-button {
+    width: 20vw;
+  }
+}
+@media only screen and (max-width: 22.5em) {
+  .reload-button {
+    width: 29vw;
+    height: 7.5vh;
+    font-size: 1rem;
+  }
+}
+
+.reload-button-icon {
+  height: 40%;
+}
+@media only screen and (max-width: 22.5em) {
+  .reload-button-icon {
+    height: 45%;
+  }
+}
+
+.reload-button:active {
+  transform: scale(0.97);
+  transition: all 100ms ease-in-out;
+}
+
+.reload-button:active .reload-button-icon {
+  animation: spin 1s ease-in-out 1;
+}
+
+.reload-button:focus .reload-button-icon {
+  animation: spin 1s ease-in-out 1;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+.attribute {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.25rem;
+  color: var(--dark);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  font-size: 100%;
+  font-family: "Noto Sans", sans-serif;
+  background: var(--secondary);
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  padding: 5.83vh 7.34375vw;
+  overflow: hidden;
+}
+
+:root {
+  --primary: #00cb14;
+  --secondary: #fffdec;
+  --dark: #001302;
+  --light: #deffe1;
+}
+
+:root {
+  --noto-sans: font-family: "Noto Sans", sans-serif;
+}
+
+/*# sourceMappingURL=index.css.map */
